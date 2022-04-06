@@ -1,0 +1,26 @@
+[
+{
+    "mobile":"vivo",
+    "price":"20000",
+    "color":"black",
+    "Ram":"4"
+},
+{
+    "mobile":"oppo",
+    "price":"15000",
+    "color":"blue",
+    "Ram":"6"
+},
+{
+    "mobile":"realme",
+    "price":"16000",
+    "color":"red",
+    "Ram":"4"
+},
+{
+    "mobile":"samsung",
+    "price":"21000",
+    "color":"white",
+    "Ram":"4"
+}   
+]

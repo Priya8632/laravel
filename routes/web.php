@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Amount;
 use App\Http\Controllers\maths_operation;
 use App\Http\Controllers\mobile_details;
+use App\Http\Controllers\maths_operation2;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,10 @@ use App\Http\Controllers\mobile_details;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('file1');
 });
 Route::get("Amount/{amount}",[Amount::class,"check"]);
 Route::get("maths_operation",[maths_operation::class,"maths"]);
-Route::get("mobile_details/{value}",[mobile_details::class , "mobile"]);
+Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
+//Route::get("mobile_details/{index}",[mobile_details::class , "details"]);
+Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
