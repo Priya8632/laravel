@@ -17,11 +17,13 @@ use App\Http\Controllers\maths_operation2;
 |
 */
 
-Route::get('/', function () {
+Route::get('/file1', function () {
     return view('file1');
+});
+Route::get('/file2', function(){
+    return view('file2');
 });
 Route::get("Amount/{amount}",[Amount::class,"check"]);
 Route::get("maths_operation",[maths_operation::class,"maths"]);
 Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
-//Route::get("mobile_details/{index}",[mobile_details::class , "details"]);
 Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
