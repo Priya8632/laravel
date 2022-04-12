@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+
+<h1>Information of Data:</h1>
+<h2>ans : {{$data}}</h2>
+
+    <!-- <div class="container">
     <table class="table table-striped">
         <h1>MARKSHEET</h1>
         <tr>
@@ -48,6 +52,6 @@
             <td>87%</td>
         </tr>
     </table>
-    </div>
+    </div> -->
 </body>
 </html>
