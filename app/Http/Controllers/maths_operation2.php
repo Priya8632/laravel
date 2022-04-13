@@ -32,4 +32,8 @@ class maths_operation2 extends Controller
 
     }
 }
+    function fun7($user,$pass)
+    {
+        return view("file1",["info" => $user,$pass]);
+    }
 }

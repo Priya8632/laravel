@@ -21,4 +21,8 @@ class maths_operation extends Controller
             $counter = $n1;    
         }
     }
+    function fun6()
+    {
+        return view("file6");
+    }
 }

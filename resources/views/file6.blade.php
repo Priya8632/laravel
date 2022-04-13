@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>function 6</title>
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
     <style>
         /*header*/
@@ -179,65 +179,7 @@ h2{
             <li><a href="ragister.html">RAGISTER</a></li>
         </ul>
     </nav>
-<!--image-->    
-<div class="img1">
-    <div class="text">
-        <span>Courses</span>
-    </div>
-</div>
-<!--short term-->
-<div id="short term">
-    <h3>Short term</h3>
-</div>
-<div id="#it for kids">
-<div class="center">
-    <div class="flex">
-        <div class="a">
-            <h2>IT for Kids</h2>
-            <p> - Typing<br>
-                - WordPad<br>
-                - MS-Word<br>
-                - Ms-Word<br>
-                - Power Point<br>
-                - Games & Multimedia<br>
-                - Notepad
-            </p>
-        </div>
-        <div class="b">
-            <img src="logo.jpg" height="200px" width="300px" style="margin-top: 30px;">
-        </div>
-    </div>
-</div>
-</div>
-<div id="#ccc">
-<div class="center">
-    <div class="flex">
-        <div class="a">
-            <h2>CCC</h2>
-            <p>
-                - Computer Fundamental<br>
-                - Internet<br>
-                - Typing(English,Hindi,Gujarati)<br>
-                - Printing,Scanning<br>
-                - MS-paint<br>
-                - MS-office<br>
-                - CD/DVD writing<br>
-                - Notepad<br>
-                - MS-Word<br>
-                - Use of Removable Devices<br>
-                - Word pad<br>
-                - MS-Excel<br>
-                - Multimedia<br>
-                - MS-Power Point<br>
-                - Theory
-            </p>
-        </div>
-        <div class="b">
-            <img src="logo1.jpg" height="200px" width="300px">
-        </div>
-    </div>
-</div>
-</div>
+
 
 </body>
 </html>

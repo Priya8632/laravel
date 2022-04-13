@@ -50,9 +50,20 @@ Route::get('/file10', function(){
 });
 
 Route::get("Amount/{amount}",[Amount::class,"check"]);
+
 Route::get("maths_operation",[maths_operation::class,"maths"]);
+// Route::get("maths_operation",[maths_operation::class,"fun6"]);
+
 Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
+
 Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
-Route::get("displaytext/{ans}",[displaytext::class,"fun1"]);
+Route::get("maths_operation2/{user}/{pass}",[maths_operation2::class,"fun7"]);
+
+
+
+// Route::get("displaytext/{ans}",[displaytext::class,"fun1"]);
 Route::get("displaytext",[displaytext::class,"fun2"]);
 Route::get("displaytext",[displaytext::class,"fun3"]);
+Route::get("displaytext/{fruit}",[displaytext::class,"fun4"]);
+Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
+

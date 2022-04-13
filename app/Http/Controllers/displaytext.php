@@ -19,6 +19,13 @@ class displaytext extends Controller
     {
         $data = 20 + 30; 
         return view("file8",["result" => $data]);
-        
+    }
+    function fun4($fruit)
+    {
+        return view("file7" ,["result" => $fruit]);
+    }
+    function fun5($n1,$n2)
+    {
+        return view("file7",["data" => $n1+$n2]);
     }
 }
