@@ -11,16 +11,22 @@
 <body>
 
 
-<div class="container">
+<div class="container m-3 p-5 bg-info">
 
 <form action="">
     <div class="form-group">
         <label for="">username</label>
-        <input type="text" name="name" value="{{$info}}">
+        <input type="text" name="name" value="{{$info}}" class="form-control">
     </div>
-    <div class="container">
+    <div class="form-group">
         <label for="">password</label>
-        <input type="password" name="pass" value="{{$info}}">
+        <input type="password" name="pass" value="{{$info}}" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="checkbox">Agree term and condition
+    </div>
+    <div class="form-group">
+        <button class="btn btn-dark">submit</button>
     </div>
 </form>
 </div>
