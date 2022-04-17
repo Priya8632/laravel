@@ -6,7 +6,7 @@ use App\Http\Controllers\maths_operation;
 use App\Http\Controllers\mobile_details;
 use App\Http\Controllers\maths_operation2;
 use App\Http\Controllers\displaytext;
-
+use App\Http\Controllers\userForm;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,12 @@ use App\Http\Controllers\displaytext;
 |
 */
 
+Route::get('/file1', function () {
+    return view('file1');
+});
+Route::get('/main', function () {
+    return view('main');
+});
 Route::get('/file1', function () {
     return view('file1');
 });
@@ -66,4 +72,5 @@ Route::get("displaytext",[displaytext::class,"fun2"]);
 Route::get("displaytext",[displaytext::class,"fun3"]);
 Route::get("displaytext/{fruit}",[displaytext::class,"fun4"]);
 Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
-
+Route::post("userForm",[userForm::class,"getdata"]);
+Route::view("Login","userForm");
