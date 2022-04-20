@@ -20,13 +20,8 @@
 
 <body>
     @include('header')
-    <div class="container h-100">
-        <div class="row">
-            <div class="col-6">
-                <h1>Main page project</h1>
-            </div>
-        </div>
-    </div>
+    <h1>Laravel new project</h1>
+    <img src = {{ url('images/c1.jpg')}} height="400px" width="500px">
     @include('footer')
 </body>
 

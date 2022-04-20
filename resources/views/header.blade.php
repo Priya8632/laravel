@@ -1,26 +1,36 @@
 
-<ul class="nav nav-tabs" id="navId">
-    <li class="nav-item">
-        <a href="#tab1Id" class="nav-link active">Active</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#tab2Id">Action</a>
-            <a class="dropdown-item" href="#tab3Id">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#tab4Id">Action</a>
-        </div>
-    </li>
-    <li class="nav-item">
-        <a href="#tab5Id" class="nav-link">Another link</a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link disabled">Disabled</a>
-    </li>
-</ul>
+    
+<nav class="navbar navbar-expand-lg bg-dark">
 
-<!-- Tab panes -->
+    <ul class="navbar nav mr-auto">
+        <li class="nav-item"><a href="" class="nav-link text-success">HOME</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">ABOUT US</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">COURSE</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">LOGIN</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">RAGISTER</a></li>
+    </ul>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg bg-dark">
+
+    <ul class="navbar nav mr-auto">
+        <li class="nav-item"><a href="" class="nav-link text-success">HOME</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">ABOUT US</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">COURSE</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">LOGIN</a></li>
+        <li class="nav-item"><a href="" class="nav-link text-success">RAGISTER</a></li>
+    </ul>
+    <button class="badge badge-pill badge-info p-2" style="float:right;" id ="btn">SIGN IN</button>
+</nav>
+<script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $(".form").slideDown();
+            });
+        });
+    </script>-->
+
+<!--Tab panes--> 
 <div class="tab-content">
     <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
     <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
