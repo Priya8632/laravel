@@ -11,24 +11,6 @@
     </ul>
 </nav>
 
-<!-- <nav class="navbar navbar-expand-lg bg-dark">
-
-    <ul class="navbar nav mr-auto">
-        <li class="nav-item"><a href="" class="nav-link text-success">HOME</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">ABOUT US</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">COURSE</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">LOGIN</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">RAGISTER</a></li>
-    </ul>
-    <button class="badge badge-pill badge-info p-2" style="float:right;" id ="btn">SIGN IN</button>
-</nav>
-<script>
-        $(document).ready(function() {
-            $("#btn").click(function() {
-                $(".form").slideDown();
-            });
-        });
-    </script>-->
 
 <!--Tab panes--> 
 <div class="tab-content">
