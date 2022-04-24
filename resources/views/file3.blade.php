@@ -48,7 +48,7 @@
         </div>
         <p>DATE</p>
         <div id="date">
-
+            <p>DATE</p>
         </div>
     </div>
 
@@ -66,7 +66,6 @@
             document.getElementById('time').innerHTML = time;
             document.getElementById('date').innerHTML = date;
         }, 1000);
-
     </script>
 
 </body>

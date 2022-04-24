@@ -31,7 +31,7 @@
         {
             $("#btn").click(function()
             {
-                $(".form").slideDown(3000);
+                $(".form").slideDown(1500);
             });
         });
 
