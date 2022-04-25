@@ -15,14 +15,46 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+        .back
+        {
+            background-image: url('../images/c10.jpg');
+            background-repeat: no-repeat;
+            background-position:top;
+            background-size: cover;
+            background-attachment:fixed;
+            width:100%;
+            height:800px;
+
+        }
+        ul li a:hover{
+            background-color:chocolate;
+            color:white;
+        }
+        ul li a {
+            color:black;
+            font-size:medium;
+        }
+        h4{
+            margin-top:100px;
+        }
+        h1,button,h4{
+            margin-left:50px;
+        }
+        button{
+            background-color: chocolate;
+            border:none;
+            padding:10px;
+        }
     </style>
 </head>
 
 <body>
-    @include('header')
-    <h1>Laravel new project</h1>
-    <img src = {{ url('images/c1.jpg')}} height="400px" width="500px">
-    @include('footer')
+    <div class="back">
+        @include('header')
+        <h4>Have A Cake-A-Dilicious</h4>
+        <h1>UP to 50% Off</h1>
+        <button type="submit">Shop Now</button>
+    </div>
 </body>
 
 </html>

@@ -11,11 +11,17 @@
     <style>
         .container
         {
-            background-color: salmon;
+            background-color:coral;
             
         }
         h1{
             margin-bottom:20px;
+        }
+        ul li a{
+            color:black;
+        }
+        ul li a:hover{
+            color:chocolate;
         }
     </style>
 </head>

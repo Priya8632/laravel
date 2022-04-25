@@ -1,13 +1,13 @@
 
     
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav>
 
-    <ul class="navbar nav mr-auto">
-        <li class="nav-item"><a href="" class="nav-link text-success">HOME</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">ABOUT US</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">COURSE</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">LOGIN</a></li>
-        <li class="nav-item"><a href="" class="nav-link text-success">RAGISTER</a></li>
+    <ul class="nav p-2">
+        <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="" class="nav-link">ABOUT US</a></li>
+        <li class="nav-item"><a href="" class="nav-link">COURSE</a></li>
+        <li class="nav-item"><a href="" class="nav-link">LOGIN</a></li>
+        <li class="nav-item"><a href="userForm" class="nav-link">RAGISTER</a></li>
     </ul>
 </nav>
 
