@@ -9,16 +9,17 @@ class userForm extends Controller
     function getdata(Request $req)
     {
         $req->validate([
-        'first_name' => 'required | min:3 | max:10 | alpha',
-        'last_name' =>'required',
-        'email' => 'required',
-        'password' => 'required | email',
-        'confirm password' => 'required | numeric',
+        'first_name' => 'required | min:5 | max:10 | alpha',
+        'last_name' =>'required | min:5 | max:13 | alpha',
+        'email' => 'required | email',
+        'password' => 'required',
+        'confirm password' => 'required_with:password | same:password',
         'mobile no' => 'required | numeric',
-        'age' => 'required',
-        'pincode' => 'required',
+        'age' => 'required | numeric',
+        'pincode' => 'required | numeric',
         'gender' => 'required',
-        'city' => 'required'
+        'city' => 'required',
+        'hobby' => 'required'
     
     ]);
 

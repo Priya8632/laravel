@@ -3,7 +3,7 @@
 <nav>
 
     <ul class="nav p-2">
-        <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="main" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="" class="nav-link">ABOUT US</a></li>
         <li class="nav-item"><a href="" class="nav-link">COURSE</a></li>
         <li class="nav-item"><a href="" class="nav-link">LOGIN</a></li>

@@ -113,6 +113,17 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="">Hobbies</label><br>
+                    <input type="checkbox" name="hobby">Reading<br>
+                    <input type="checkbox" name="hobby">Writing<br>
+                    <input type="checkbox" name="hobby">Playning<br>
+                    <input type="checkbox" name="hobby">Cooking<br>
+                    <small class="form-text text-dark"> @error('hobby'){{$message}} @enderror </small>
+                </div>
+            </div>
+
             <div class="form-group">
                 <input type="checkbox">Agree term and condition
             </div>
