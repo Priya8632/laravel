@@ -48,7 +48,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                     <label for="">Lastname</label>
-                    <input type="password" name="last_name" class="form-control">
+                    <input type="text" name="last_name" class="form-control">
                     <small class="form-text  text-dark"> @error('last_name'){{$message}} @enderror </small>
                     </div>
                 </div>

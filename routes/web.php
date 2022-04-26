@@ -18,18 +18,27 @@ use App\Http\Controllers\userForm;
 |
 */
 
-Route::get('/userForm', function () {
-    return view('userForm');
+Route::get('/', function () {
+    return view('Home');
 });
-Route::get('/main', function () {
-    return view('main');
+Route::view('userForm','userForm');
+Route::view('Login','Login');
+
+Route::group(["middleware" => ["usercheck"]], function(){
+    Route::get("group", function () {
+        echo 'Welcome to web development group';
+    });
+
+    Route::get('php', function () {
+        echo "php";
+    });
+
+    Route::get('html', function () {
+        echo "html";
+    });
+
+
 });
-// Route::get('/file1', function () {
-//     return view('file1');
-// });
-// Route::get('/file2', function(){
-//     return view('file2');
-// });
 // Route::get('/file3', function(){
 //     return view('file3');
 // });
@@ -73,4 +82,4 @@ Route::get('/main', function () {
 // Route::get("displaytext/{fruit}",[displaytext::class,"fun4"]);
 // Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
 Route::post("userForm",[userForm::class,"getdata"]);
-Route::view("Login","userForm");
+//Route::view("Login","userForm");

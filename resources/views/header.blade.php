@@ -4,9 +4,9 @@
 
     <ul class="nav p-2">
         <li class="nav-item"><a href="main" class="nav-link">HOME</a></li>
-        <li class="nav-item"><a href="" class="nav-link">ABOUT US</a></li>
-        <li class="nav-item"><a href="" class="nav-link">COURSE</a></li>
-        <li class="nav-item"><a href="" class="nav-link">LOGIN</a></li>
+        <li class="nav-item"><a href="" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="" class="nav-link">SHOP</a></li>
+        <li class="nav-item"><a href="Login" class="nav-link">LOGIN</a></li>
         <li class="nav-item"><a href="userForm" class="nav-link">RAGISTER</a></li>
     </ul>
 </nav>
