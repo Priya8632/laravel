@@ -28,15 +28,14 @@
 
 <body>
 
-
     @include('header')
 
-   
     <div class="container m-3 p-5 text-dark mx-auto">
 
         <form action="userForm" method="POST">
             @csrf
             <h1>Ragistration Form</h1>
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -70,22 +69,23 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="">Confirm password</label>
-                    <input type="password" name="confirm password" class="form-control">
-                    <small class="form-text text-dark"> @error('confirm password'){{$message}} @enderror </small>
+                    <input type="password" name="confirm_password" class="form-control">
+                    <small class="form-text text-dark"> @error('confirm_password'){{$message}} @enderror </small>
                 </div>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Mobile no</label>
-                    <input type="text" name="mobile no" class="form-control">
-                    <small class="form-text text-dark"> @error('mobile no'){{$message}} @enderror </small>
+                    <input type="text" name="mobile_no" class="form-control">
+                    <small class="form-text text-dark"> @error('mobile_no'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Gender</label><br>
                     <input type="radio"  name="gender">Male
                     <input type="radio"  name="gender">Female
                     <input type="radio"  name="gender">Others
+                    <small class="form-text text-dark"> @error('gender'){{$message}} @enderror </small>
 
                 </div>
             </div>
@@ -105,6 +105,7 @@
                         <option value="">Vadodara</option>
                         <option value="">Valsad</option>
                     </select>
+                    <!-- <small class="form-text text-dark"> @error('city'){{$message}} @enderror </small> -->
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Pincode</label>
@@ -132,10 +133,6 @@
             </div>
         </form>
     </div>
-
-    
-
-
 
 </body>
 

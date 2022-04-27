@@ -7,6 +7,7 @@ use App\Http\Controllers\mobile_details;
 use App\Http\Controllers\maths_operation2;
 use App\Http\Controllers\displaytext;
 use App\Http\Controllers\userForm;
+use App\Http\Controllers\Login;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +22,19 @@ use App\Http\Controllers\userForm;
 Route::get('/', function () {
     return view('Home');
 });
-Route::view('userForm','userForm');
+// Route::get('/Login', function () {
+//     return view('Login');
+// });
+// Route::view('userForm','userForm');
+// Route::view('Login','Login');
+
+Route::post("userForm",[userForm::class,"getdata"]);
+Route::post('Login',[Login::class,'loginuser']);
+Route::view("userForm","userForm");
 Route::view('Login','Login');
+
+
+// Route::view('userForm','userForm');
 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {
@@ -81,5 +93,3 @@ Route::group(["middleware" => ["usercheck"]], function(){
 // Route::get("displaytext",[displaytext::class,"fun3"]);
 // Route::get("displaytext/{fruit}",[displaytext::class,"fun4"]);
 // Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
-Route::post("userForm",[userForm::class,"getdata"]);
-//Route::view("Login","userForm");

@@ -33,11 +33,11 @@
         @csrf
             <div class="form-group col-md-10">
                 <label for="inputEmail4">User Name</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="email" class="form-control" name="username">
             </div>
             <div class="form-group col-md-10">
                 <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <input type="password" class="form-control" name="password">
             </div>
             <div class="form-group col-md-10">
                 <input type="checkbox">Agree term and condition
