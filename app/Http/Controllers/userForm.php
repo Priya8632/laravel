@@ -11,14 +11,15 @@ class userForm extends Controller
         $req->validate([
             'first_name' => 'required | min:5 | max:10 | alpha',
             'last_name' => 'required | min:5 | max:13 | alpha',
-            'email' => 'required',
+            'email' =>"required",
             'password' => 'required',
             'confirm_password' => 'required | same:password',
             'mobile_no' => 'required | numeric',
+            'gender' => 'required',
             'age' => 'required | numeric',
             'pincode' => 'required | numeric',
-            'gender' => 'required',
-            'city' => 'required',
+            'city' => 'required | in:Surat,Rajkot,Amreli,Vadodara,Valsad',
+            'pincode' => 'required | numeric',
             'hobby' => 'required'
         ]);
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> -->
 
 <head>
     <meta charset="utf-8">
@@ -40,11 +40,7 @@
         h1,button,h4{
             margin-left:50px;
         }
-        button{
-            background-color: chocolate;
-            border:none;
-            padding:10px;
-        }
+      
     </style>
 </head>
 
@@ -53,7 +49,7 @@
         @include('header')
         <h4>Have A Cake-A-Dilicious</h4>
         <h1>UP to 50% Off</h1>
-        <button type="submit">Shop Now</button>
+        <button type="button" class="btn btn-dark">Shop Now</button>
     </div>
 </body>
 

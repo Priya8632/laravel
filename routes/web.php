@@ -19,22 +19,17 @@ use App\Http\Controllers\Login;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
-// Route::get('/Login', function () {
-//     return view('Login');
-// });
-// Route::view('userForm','userForm');
-// Route::view('Login','Login');
+Route::view('/','users.Home');
 
 Route::post("userForm",[userForm::class,"getdata"]);
 Route::post('Login',[Login::class,'loginuser']);
-Route::view("userForm","userForm");
-Route::view('Login','Login');
+Route::view("userForm","users.userForm");
+Route::view('Login','users.Login');
+Route::view('product','users.product');
 
-
-// Route::view('userForm','userForm');
+Route::fallback(function () {
+    return view('users.Default');
+});
 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {

@@ -17,9 +17,6 @@
         h1{
             margin-bottom:20px;
         }
-        ul li a{
-            color:black;
-        }
         ul li a:hover{
             color:chocolate;
         }
@@ -86,7 +83,6 @@
                     <input type="radio"  name="gender">Female
                     <input type="radio"  name="gender">Others
                     <small class="form-text text-dark"> @error('gender'){{$message}} @enderror </small>
-
                 </div>
             </div>
 
@@ -99,13 +95,13 @@
                 <div class="form-group col-md-4">
                     <label for="">City</label>
                     <select name="city" id="" class="form-control">
-                        <option value="">Surat</option>
-                        <option value="">Rajkot</option>
-                        <option value="">Amreli</option>
-                        <option value="">Vadodara</option>
-                        <option value="">Valsad</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Amreli">Amreli</option>
+                        <option value="Vadodara">Vadodara</option>
+                        <option value="Valsad">Valsad</option>
                     </select>
-                    <!-- <small class="form-text text-dark"> @error('city'){{$message}} @enderror </small> -->
+                    <small class="form-text text-dark"> @error('city'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Pincode</label>
