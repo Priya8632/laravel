@@ -17,7 +17,7 @@ class mobile_details extends Controller
             {"modelName":"oppo","price": "18,999","color":"silver"},
             {"modelName":"Vivo","price": "20,999","color":"blue"},
             {"modelName":"apple","price": "59,999","color":"gold"}
-        ]';
+        ];
 
         $json = json_decode($content, true);
 
