@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-<!-- @include('header'); -->
+@include('users.header');
 <div class="container m-3 p-5 text-dark mx-auto">
     <h1>Login Here</h1>
     <form action="Login" method="POST">

@@ -20,12 +20,11 @@ use App\Http\Controllers\Login;
 */
 
 Route::view('/','users.Home');
-Route::view('header','users.header');
 Route::post("userForm",[userForm::class,"getdata"]);
 Route::post('Login',[Login::class,'loginuser']);
 Route::view("userForm","users.userForm");
 Route::view('Login','users.Login');
-Route::view('product','users.Product');
+Route::view('Product','users.Product');
 
 Route::fallback(function () {
     return view('users.Default');
@@ -67,9 +66,9 @@ Route::group(["middleware" => ["usercheck"]], function(){
 // Route::get('/file9', function(){
 //     return view('file9');
 // });
-// Route::get('/file10', function(){
-//     return view('file10');
-// });
+Route::get('/welcome', function(){
+    return view('welcome');
+});
 
 // Route::get("Amount/{amount}",[Amount::class,"check"]);
 

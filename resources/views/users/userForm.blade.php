@@ -25,7 +25,7 @@
 
 <body>
 
-    <!-- @include('header') -->
+    @include('users.header')
 
     <div class="container m-3 p-5 text-dark mx-auto">
 

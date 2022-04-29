@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- @include('header') -->
+    @include('users.header')
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">

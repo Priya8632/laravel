@@ -46,6 +46,7 @@
 
 <body>
     <div class="back">
+        @include('users.header')
         <h4>Have A Cake-A-Dilicious</h4>
         <h1>UP to 50% Off</h1>
         <button type="button" class="btn btn-dark">Shop Now</button>
