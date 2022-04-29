@@ -20,12 +20,12 @@ use App\Http\Controllers\Login;
 */
 
 Route::view('/','users.Home');
-
+Route::view('header','users.header');
 Route::post("userForm",[userForm::class,"getdata"]);
 Route::post('Login',[Login::class,'loginuser']);
 Route::view("userForm","users.userForm");
 Route::view('Login','users.Login');
-Route::view('product','users.product');
+Route::view('product','users.Product');
 
 Route::fallback(function () {
     return view('users.Default');

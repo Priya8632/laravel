@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> -->
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -46,7 +46,6 @@
 
 <body>
     <div class="back">
-        @include('header')
         <h4>Have A Cake-A-Dilicious</h4>
         <h1>UP to 50% Off</h1>
         <button type="button" class="btn btn-dark">Shop Now</button>
