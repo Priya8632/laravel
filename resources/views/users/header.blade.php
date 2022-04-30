@@ -7,7 +7,6 @@
 
 
 <nav>
-
     <ul class="nav p-2">
         <li class="nav-item"><a href="Home" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="" class="nav-link">ABOUT</a></li>

@@ -18,17 +18,18 @@ use App\Http\Controllers\Login;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::view('/','users.Home');
-Route::post("userForm",[userForm::class,"getdata"]);
-Route::post('Login',[Login::class,'loginuser']);
+Route::view('Home','users.Home');
+Route::view('Product','users.Product');
 Route::view("userForm","users.userForm");
 Route::view('Login','users.Login');
-Route::view('Product','users.Product');
+Route::post("userForm",[userForm::class,"getdata"]);
+Route::post('Login',[Login::class,'loginuser']);
+Route::view('data','users.data');
 
-Route::fallback(function () {
-    return view('users.Default');
-});
+// Route::fallback(function () {
+//     return view('users.Default');
+// });
 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {
