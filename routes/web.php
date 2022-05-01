@@ -8,6 +8,8 @@ use App\Http\Controllers\maths_operation2;
 use App\Http\Controllers\displaytext;
 use App\Http\Controllers\userForm;
 use App\Http\Controllers\Login;
+use App\Http\Controllers\dbtest;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,9 @@ Route::view('Login','users.Login');
 Route::post("userForm",[userForm::class,"getdata"]);
 Route::post('Login',[Login::class,'loginuser']);
 Route::view('data','users.data');
+Route::view('priya','priya')->middleware('test');
+
+Route::get('dbtest',[dbtest::class,'dbCheck']);
 
 // Route::fallback(function () {
 //     return view('users.Default');
@@ -35,7 +40,6 @@ Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {
         echo 'Welcome to web development group';
     });
-
     Route::get('php', function () {
         echo "php";
     });

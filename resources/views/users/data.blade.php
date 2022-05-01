@@ -1,1 +1,1 @@
-<h1>not access this page under 18 years</h1>
+<h1>not access this page</h1>

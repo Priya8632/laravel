@@ -11,7 +11,7 @@
     <style>
         .container
         {
-            background-color:coral;
+            background-color:darksalmon;
             width:700px;
         }
         h1{

@@ -8,10 +8,10 @@ class Login extends Controller
 {
     function loginuser(Request $req)
     {
-        // $req->validate([
-        //     'email' => 'required | email',
-        //     'password' => 'required'
-        // ]);
+        $req->validate([
+            'email' => 'required | email',
+            'password' => 'required'
+        ]);
 
         return $req->input();
     }

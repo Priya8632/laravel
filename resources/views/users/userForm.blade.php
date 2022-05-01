@@ -11,7 +11,7 @@
     <style>
         .container
         {
-            background-color:coral;
+            background-color:darksalmon;
             
         }
         h1{
@@ -37,14 +37,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                     <label for="">Firstname</label>
-                    <input type="text" name="first_name" class="form-control">
+                    <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
                     <small class="form-text  text-dark"> @error('first_name'){{$message}} @enderror </small>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                     <label for="">Lastname</label>
-                    <input type="text" name="last_name" class="form-control">
+                    <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">
                     <small class="form-text  text-dark"> @error('last_name'){{$message}} @enderror </small>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Email address</label>
-                    <input type="text" name="email" class="form-control">
+                    <input type="text" name="email" class="form-control" value="{{old('email')}}">
                     <small class="form-text text-dark"> @error('email'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -61,12 +61,12 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Password</label>
-                    <input type="password" name="password" class="form-control">
+                    <input type="password" name="password" class="form-control" value="{{old('password')}}">
                     <small class="form-text text-dark"> @error('password'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="">Confirm password</label>
-                    <input type="password" name="confirm_password" class="form-control">
+                    <input type="password" name="confirm_password" class="form-control" value="{{old('confirm_password')}}">
                     <small class="form-text text-dark"> @error('confirm_password'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Mobile no</label>
-                    <input type="text" name="mobile_no" class="form-control">
+                    <input type="text" name="mobile_no" class="form-control" value="{{old('mobile_no')}}">
                     <small class="form-text text-dark"> @error('mobile_no'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="">Age</label>
-                    <input type="text" name="age" class="form-control">
+                    <input type="text" name="age" class="form-control" value="{{old('age')}}">
                     <small class="form-text text-dark"> @error('age'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Pincode</label>
-                    <input type="text" name="pincode" class="form-control">
+                    <input type="text" name="pincode" class="form-control" value="{{old('pincode')}}">
                     <small class="form-text text-dark"> @error('pincode'){{$message}} @enderror </small>
                 </div>
             </div>
