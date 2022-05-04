@@ -10,6 +10,8 @@ class dbtest extends Controller
 {
     function dbCheck()
     {
-        return FacadesDB::select("select * from detail");
+        $users =  FacadesDB::select("select * from detail");
+        return view("users.admin_dashboard",["records"=>$users]);
+
     }
 }

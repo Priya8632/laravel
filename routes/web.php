@@ -30,6 +30,7 @@ Route::post('Login',[Login::class,'loginuser']);
 Route::view('data','users.data');
 Route::view('priya','priya')->middleware('test');
 
+# fetch data from database
 Route::get('dbtest',[dbtest::class,'dbCheck']);
 
 // Route::fallback(function () {
