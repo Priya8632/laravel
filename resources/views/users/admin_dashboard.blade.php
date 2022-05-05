@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    @include('users.header')
     <table class="table text-center">
 
         <thead>

@@ -21,9 +21,8 @@
             background-repeat: no-repeat;
             background-position:top;
             background-size: cover;
-            background-attachment:fixed;
             width:100%;
-            height:800px;
+            height:100vh;
 
         }
         ul li a:hover{
