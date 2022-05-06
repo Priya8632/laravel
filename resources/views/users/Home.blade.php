@@ -36,10 +36,10 @@
         h4{
             margin-top:100px;
         }
-        h1,button,h4{
-            margin-left:50px;
+        h1,h4{
+            margin-left:40px;
         }
-      
+        
     </style>
 </head>
 
@@ -48,7 +48,7 @@
         @include('users.header')
         <h4>Have A Cake-A-Dilicious</h4>
         <h1>UP to 50% Off</h1>
-        <button type="button" class="btn btn-dark">Shop Now</button>
+        <a href="Product" class="btn btn-dark" style="margin-left:40px;">Shop Now</a>
     </div>
 </body>
 

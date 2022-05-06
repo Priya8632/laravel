@@ -29,13 +29,16 @@ Route::post("userForm",[userForm::class,"getdata"]);
 Route::post('Login',[Login::class,'loginuser']);
 Route::view('data','users.data');
 Route::view('priya','priya')->middleware('test');
+Route::view('info','users.info');
+Route::view('about','users.about');
 
 # fetch data from database
 Route::get('dbtest',[dbtest::class,'dbCheck']);
 
-// Route::fallback(function () {
-//     return view('users.Default');
-// });
+#this is deafult route
+Route::fallback(function () {
+    return view('users.Default');
+});
 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {

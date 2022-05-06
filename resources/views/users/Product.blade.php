@@ -14,23 +14,113 @@
         ul li a:hover {
             color: chocolate;
         }
-        body{
-            background-color:burlywood;
+
+        body {
+            background-color: burlywood;
+        }
+
+        .container-fluid {
+            display: flex;
+            padding: 50px;
+        }
+
+        .card {
+            margin: 29px;
         }
     </style>
 </head>
 
 <body>
     @include('users.header')
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="images/c1.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Strobery</h5>
-            <p class="card-text">Price : 8.23 $</p>
-            <a href="#" class="btn btn-primary">Order</a>
+    <!-- <div class="fluid-container"> 
+    <div class="container-fluid  mx-auto text-center w-100 h-60">
+        <div class="row p-5">
+
+            <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-fluid" src="images/c1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Strobery</h5>
+                        <p class="card-text">Price : 8.23 $</p>
+                        <a href="#" class="btn btn-dark">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top img-fluid" src="images/c2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cookies</h5>
+                        <p class="card-text">Price : 7.23 $</p>
+                        <a href="#" class="btn btn-dark">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/c3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">biskites</h5>
+                        <p class="card-text">Price : 8.00 $</p>
+                        <a href="#" class="btn btn-dark">Order</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/c4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cup-cake</h5>
+                        <p class="card-text">Price :5.69 $</p>
+                        <a href="#" class="btn btn-dark">Order</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- second row -->
+    <div class="container-fluid">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/c5.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Cookies</h5>
+                <p class="card-text">Price : 7.89 $</p>
+                <a href="info" class="btn btn-dark">Order</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/c6.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Chocolate</h5>
+                <p class="card-text">Price : 6.23 $</p>
+                <a href="info" class="btn btn-dark">Order</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/c7.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Black-forest</h5>
+                <p class="card-text">Price : 8.23 $</p>
+                <a href="info" class="btn btn-dark">Order</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/c8.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Black-forest</h5>
+                <p class="card-text">Price : 9.00 $</p>
+                <a href="info" class="btn btn-dark">Order</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
