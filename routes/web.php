@@ -32,13 +32,16 @@ Route::view('priya','priya')->middleware('test');
 Route::view('info','users.info');
 Route::view('about','users.about');
 
+#fetch data from database through controller with model
+Route::get('modal', [student_Control::class, "data"]);
+
 # fetch data from database
 Route::get('dbtest',[dbtest::class,'dbCheck']);
 
 #this is deafult route
-Route::fallback(function () {
-    return view('users.Default');
-});
+// Route::fallback(function () {
+//     return view('users.Default');
+// });
 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {

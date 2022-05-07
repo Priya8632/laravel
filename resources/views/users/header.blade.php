@@ -8,7 +8,7 @@
 
 <nav>
     <ul class="nav p-2">
-        <img src="images/logo_cake.png" height="70px" width="150px" style="float:left;margin-right:900px;" alt="">
+        <img src="images/logo_cake.png" height="90px" width="150px" style="float:left;margin-right:900px;" alt="">
         <li class="nav-item"><a href="Home" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
         <li class="nav-item"><a href="Product" class="nav-link">SHOP</a></li>
