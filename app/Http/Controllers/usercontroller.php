@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Student;
+use App\Models\User;
 
-class student_control extends Controller
+class usercontroller extends Controller
 {
     function data()
     {
-        return Student::all();
+
+        return User::all();
     }
 }

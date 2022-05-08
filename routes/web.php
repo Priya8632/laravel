@@ -9,6 +9,8 @@ use App\Http\Controllers\displaytext;
 use App\Http\Controllers\userForm;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\dbtest;
+use App\Http\Controllers\Httpcontroller;
+use App\Http\Controllers\usercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,24 +22,29 @@ use App\Http\Controllers\dbtest;
 | contains the "web" middleware group. Now create something great!
 |
 */
+#user interface
 Route::view('/','users.Home');
 Route::view('Home','users.Home');
+Route::view('about','users.about');
 Route::view('Product','users.Product');
 Route::view("userForm","users.userForm");
 Route::view('Login','users.Login');
-Route::post("userForm",[userForm::class,"getdata"]);
-Route::post('Login',[Login::class,'loginuser']);
 Route::view('data','users.data');
-Route::view('priya','priya')->middleware('test');
 Route::view('info','users.info');
-Route::view('about','users.about');
+Route::post('userForm',[userForm::class,'getdata']);
+Route::post('Login',[Login::class,'loginuser']);
+
+
+Route::view('priya','priya')->middleware('test');
 
 #fetch data from database through controller with model
-Route::get('modal', [student_Control::class, "data"]);
+Route::get('modal',[usercontroller::class,'data']);
 
 # fetch data from database
 Route::get('dbtest',[dbtest::class,'dbCheck']);
 
+#fetch data from Api
+Route::get('api',[Httpcontroller::class , 'index']);
 #this is deafult route
 // Route::fallback(function () {
 //     return view('users.Default');
@@ -57,17 +64,17 @@ Route::group(["middleware" => ["usercheck"]], function(){
 
 
 });
+
+
+
+
+
+
 // Route::get('/file3', function(){
 //     return view('file3');
 // });
-// Route::get('/file4', function(){
-//     return view('file4');
-// });
 // Route::get('/file5', function(){
 //     return view('file5');
-// });
-// Route::get('/file6', function(){
-//     return view('file6');
 // });
 // Route::get('/file7', function(){
 //     return view('file7');
@@ -78,24 +85,11 @@ Route::group(["middleware" => ["usercheck"]], function(){
 // Route::get('/file9', function(){
 //     return view('file9');
 // });
-Route::get('/welcome', function(){
-    return view('welcome');
-});
 
 // Route::get("Amount/{amount}",[Amount::class,"check"]);
-
 // Route::get("maths_operation",[maths_operation::class,"maths"]);
-// Route::get("maths_operation",[maths_operation::class,"fun6"]);
-
 // Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
-
 // Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
 // Route::get("maths_operation2/{user}/{pass}",[maths_operation2::class,"fun7"]);
-
-
-
-// Route::get("displaytext/{ans}",[displaytext::class,"fun1"]);
-// Route::get("displaytext",[displaytext::class,"fun2"]);
 // Route::get("displaytext",[displaytext::class,"fun3"]);
-// Route::get("displaytext/{fruit}",[displaytext::class,"fun4"]);
 // Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
