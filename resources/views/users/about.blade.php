@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="{{ asset('CSS/main.css')}}">
     <title>about</title>
     <style>
-        body{
-            background-color:darksalmon;
-        }
         ul li a:hover{
-            color:chocolate;
+            color:palevioletred;
         }
-        
+        img{
+            text-align: center;
+        }
+        .container{
+            margin:30px;
+            padding:80px;
+        }
     </style>
 </head>
 <body>
     <div>
         @include('users.header')
-        <!-- <h1>bakery</h1>
-        <img src="images/logo_cake.png" height="300px" width="400px" alt="new image"> -->
     </div>
+    <div class="container">
+        <img src="images/c4.jpg" height="300px" width="400px" alt="new image"><br>
+        <br><br>
+        <span>Covers delicious recipes, new innovations, expert tips, and the latest on all things flour. <br>
+        Bake From Scratch Magazine features easy-to-follow recipes, techniques for creating artisan baked goods,
+        <br> and endless inspiration for home bakers.
+        </span>
+        <h2>-Denis Richi</h2> 
+    </div>
+
+
+
 </body>
 </html>

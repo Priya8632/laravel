@@ -14,11 +14,7 @@
         ul li a:hover {
             color: chocolate;
         }
-
-        body {
-            background-color: burlywood;
-        }
-
+        
         .container-fluid {
             display: flex;
             padding: 50px;
@@ -26,6 +22,7 @@
 
         .card {
             margin: 29px;
+            text-align:center;
         }
     </style>
 </head>
@@ -86,7 +83,7 @@
     <!-- second row -->
     <div class="container-fluid">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="images/c5.jpg" alt="Card image cap">
+            <img class="card-img-top" src="images/c4.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Cookies</h5>
                 <p class="card-text">Price : 7.89 $</p>
