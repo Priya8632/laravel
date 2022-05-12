@@ -44,12 +44,12 @@ Route::get('modal',[usercontroller::class,'data']);
 Route::get('dbtest',[dbtest::class,'dbCheck']);
 
 #fetch data from Api
-Route::get('api',[Httpcontroller::class , 'index']);
+Route::get('api',[Httpcontroller::class ,'index']);
 #this is deafult route
 // Route::fallback(function () {
 //     return view('users.Default');
 // });
-
+ 
 Route::group(["middleware" => ["usercheck"]], function(){
     Route::get("group", function () {
         echo 'Welcome to web development group';

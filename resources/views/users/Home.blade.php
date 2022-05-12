@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -46,10 +48,16 @@
 <body>
     <div class="back">
         @include('users.header')
+    <div data-aos="fade-up">
         <h4>Have A Cake-A-Dilicious</h4>
         <h1>UP to 50% Off</h1>
-        <a href="Product" class="btn btn-dark" style="margin-left:40px;">Shop Now</a>
-    </div>
+        <a href="Product" class="btn btn-dark" style="margin-left:40px;">Shop Now</a></div>
+    </div>  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

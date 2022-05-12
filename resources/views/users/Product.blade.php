@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
         ul li a:hover {
             color: chocolate;
         }
-        
+
         .container-fluid {
             display: flex;
             padding: 50px;
@@ -22,7 +23,7 @@
 
         .card {
             margin: 29px;
-            text-align:center;
+            text-align: center;
         }
     </style>
 </head>
@@ -80,8 +81,9 @@
         </div>
     </div>
 
-    <!-- second row -->
-    <div class="container-fluid">
+    <!-- second row -->>
+<div class="container-fluid">
+    <div data-aos="zoom-in">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/c4.jpg" alt="Card image cap">
             <div class="card-body">
@@ -90,7 +92,9 @@
                 <a href="info" class="btn btn-dark">Order</a>
             </div>
         </div>
+    </div>
 
+    <div data-aos="zoom-in">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/c6.jpg" alt="Card image cap">
             <div class="card-body">
@@ -99,7 +103,9 @@
                 <a href="info" class="btn btn-dark">Order</a>
             </div>
         </div>
+    </div>
 
+    <!-- <div data-aos="fade-left">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/c7.jpg" alt="Card image cap">
             <div class="card-body">
@@ -108,7 +114,9 @@
                 <a href="info" class="btn btn-dark">Order</a>
             </div>
         </div>
+    </div>
 
+    <div data-aos="fade-right">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/c8.jpg" alt="Card image cap">
             <div class="card-body">
@@ -117,7 +125,12 @@
                 <a href="info" class="btn btn-dark">Order</a>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
