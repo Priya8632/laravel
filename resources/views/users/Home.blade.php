@@ -19,27 +19,32 @@
         }
         .back
         {
-            background-image: url('../images/c10.jpg');
+            background-image: url('../images/c12.jpg');
             background-repeat: no-repeat;
-            background-position:top;
-            background-size: cover;
+            background-position:center;
+            background-size:cover;
             width:100%;
             height:100vh;
 
         }
+        ul li{
+            margin:8px;
+        }
         ul li a:hover{
-            background-color:chocolate;
-            color:white;
+            color:crimson;
+            font-weight: bolder;
         }
         ul li a {
-            color:black;
-            font-size:medium;
+            font-size:large;
+            font-weight:600;
         }
-        h4{
+        h3{
+            color:crimson;
             margin-top:150px;
         }
-        h1,h4{
-            margin-left:40px;
+        h1,h3{
+            margin-left:60px;
+            font-weight: 500;
         }
         
     </style>
@@ -49,9 +54,9 @@
     <div class="back">
         @include('users.header')
     <div data-aos="fade-up">
-        <h4>Have A Cake-A-Dilicious</h4>
+        <h3>Have A Cake-A-Dilicious</h3>
         <h1>UP to 50% Off</h1>
-        <a href="Product" class="btn btn-dark" style="margin-left:40px;">Shop Now</a></div>
+        <a href="Product" class="btn btn-dark" style="margin-left:60px;">Shop Now</a></div>
     </div>  
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

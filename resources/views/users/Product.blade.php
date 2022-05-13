@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
         ul li a:hover {
-            color: chocolate;
+            color:crimson;
         }
 
         .container-fluid {
@@ -105,7 +105,7 @@
         </div>
     </div>
 
-    <!-- <div data-aos="fade-left">
+    <div data-aos="fade-left">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/c7.jpg" alt="Card image cap">
             <div class="card-body">
@@ -125,7 +125,7 @@
                 <a href="info" class="btn btn-dark">Order</a>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
