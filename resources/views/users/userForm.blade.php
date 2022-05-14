@@ -17,8 +17,15 @@
         h1{
             margin-bottom:20px;
         }
+        ul li{
+            margin:12px;
+        }
         ul li a:hover{
-            color:chocolate;
+            color:crimson;
+        }
+        ul li a {
+            font-size:medium;
+            font-weight:600;
         }
     </style>
 </head>

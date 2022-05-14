@@ -16,6 +16,16 @@
             font-family: sans-serif;
 
         }
+        ul li{
+            margin:12px;
+        }
+        ul li a:hover{
+            color:crimson;
+        }
+        ul li a {
+            font-size:medium;
+            /* font-weight:600; */
+        }
 
         .wrapper {
             width: 100%;

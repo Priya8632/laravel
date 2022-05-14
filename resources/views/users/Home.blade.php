@@ -28,23 +28,26 @@
 
         }
         ul li{
-            margin:8px;
+            margin:12px;
         }
         ul li a:hover{
             color:crimson;
-            font-weight: bolder;
         }
         ul li a {
-            font-size:large;
+            font-size:medium;
             font-weight:600;
         }
         h3{
             color:crimson;
             margin-top:150px;
         }
+        h1{
+            color:black;
+        }
         h1,h3{
             margin-left:60px;
             font-weight: 500;
+            
         }
         
     </style>
