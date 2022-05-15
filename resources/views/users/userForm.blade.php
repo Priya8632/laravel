@@ -15,7 +15,8 @@
             
         }
         h1{
-            margin-bottom:20px;
+            /* margin-bottom:20px; */
+            text-align: center;
         }
         ul li{
             margin:12px;
@@ -38,17 +39,17 @@
 
         <form action="userForm" method="POST">
             @csrf
-            <h1>Ragistration Form</h1>
+            <h1 class="p-2">Ragistration Form</h1>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="form-group col-md-6">
                     <div class="form-group">
                     <label for="">Firstname</label>
                     <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
                     <small class="form-text  text-dark"> @error('first_name'){{$message}} @enderror </small>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="form-group col-md-6">
                     <div class="form-group">
                     <label for="">Lastname</label>
                     <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">

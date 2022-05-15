@@ -23,6 +23,6 @@ class userForm extends Controller
             'hobby' => 'required'
         ]);
 
-        return $req->input();
+        return redirect('Login');
     }
 }

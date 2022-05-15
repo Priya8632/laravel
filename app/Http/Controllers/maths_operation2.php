@@ -19,6 +19,7 @@ class maths_operation2 extends Controller
         echo "num1 is : 10 <br>";
         echo "num2 is : 20 <br>";
         switch($num){
+            
             case 1:
                 $addition = $n1 + $n2;
                 echo "addition is : ". $addition;

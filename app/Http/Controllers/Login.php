@@ -13,6 +13,10 @@ class Login extends Controller
             'password' => 'required'
         ]);
 
-        return $req->input();
+        $data = $req->input();
+        $req->session()->put('user',$data);
+        return redirect('dashboard');
     }
+
+     
 }

@@ -11,14 +11,16 @@
 <body>
     
 @include('users.header')
+<div class="container w-100 w-75 w-50 w-25 ">
+
     <table class="table text-center">
 
         <thead>
-            <tr class="bg-warning">
+            <!-- <tr class="bg-warning">
                 <th  colspan="5" >
                     <h1>API Records</h1>
                 </th>
-            </tr>
+            </tr> -->
 
             <tr>
                 <th>ID</th>
@@ -31,11 +33,11 @@
         <tbody>
             @foreach($collection as $item)
             <tr>
-                <th>{{$item['id']}}</th>
-                <th>{{$item['first_name']}}</th>
-                <th>{{$item['last_name']}}</th>
-                <th>{{$item['email']}}</th>
-                <th><img src={{$item['avatar']}} height="50px" /></th>
+                <td>{{$item['id']}}</th>
+                <td>{{$item['first_name']}}</th>
+                <td>{{$item['last_name']}}</th>
+                <td>{{$item['email']}}</th>
+                <td><img src={{$item['avatar']}} height="50px"></th>
             </tr>
             @endforeach
         </tbody>

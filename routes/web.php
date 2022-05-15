@@ -31,9 +31,26 @@ Route::view("userForm","users.userForm");
 Route::view('Login','users.Login');
 Route::view('data','users.data');
 Route::view('info','users.info');
+
+# session topic
 Route::post('userForm',[userForm::class,'getdata']);
 Route::post('Login',[Login::class,'loginuser']);
 
+Route::get('/Logind', function () {
+    if(session()->has('user')){
+        return redirect('dashboard');
+    }
+        return view('Login');
+    
+});
+Route::get('/logout', function () {
+    if(session()->has('user')){
+        session()->pull('user');
+    }
+        return redirect('Login');
+});
+
+Route::view('dashboard','users.dashboard');
 
 Route::view('priya','priya')->middleware('test');
 
