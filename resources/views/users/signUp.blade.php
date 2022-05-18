@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Email address</label>
-                    <input type="text" name="email" class="form-control" value="{{old('email')}}">
+                    <input type="email" name="email" class="form-control" value="{{old('email')}}">
                     <small class="form-text text-dark"> @error('email'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -121,10 +121,10 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="">Hobbies</label><br>
-                    <input type="checkbox" name="hobby">Reading<br>
-                    <input type="checkbox" name="hobby">Writing<br>
-                    <input type="checkbox" name="hobby">Playning<br>
-                    <input type="checkbox" name="hobby">Cooking<br>
+                    <input type="checkbox" name="hobby[]" value="Reading">Reading<br>
+                    <input type="checkbox" name="hobby[]" value="Writing">Writing<br>
+                    <input type="checkbox" name="hobby[]" value="Playing">Playning<br>
+                    <input type="checkbox" name="hobby[]" value="Cooking">Cooking<br>
                     <small class="form-text text-dark"> @error('hobby'){{$message}} @enderror </small>
                 </div>
             </div>

@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class userForm extends Controller
 {
-    function getdata(Request $req)
+    function getdata(Request $records)
     {
-        $req->validate([
+        $records->validate([
             'first_name' => 'required | min:5 | max:10 | alpha',
             'last_name' => 'required | min:5 | max:13 | alpha',
             'email' =>"required",
@@ -17,10 +17,25 @@ class userForm extends Controller
             'mobile_no' => 'required | numeric',
             'gender' => 'required',
             'age' => 'required | numeric',
-            'pincode' => 'required | numeric',
             'city' => 'required | in:Surat,Rajkot,Amreli,Vadodara,Valsad',
             'pincode' => 'required | numeric',
             'hobby' => 'required'
+        ]);
+
+        $hobby = implode(", ", $records->input('hobby'));
+
+        DB::table("customers")->insert([
+            "first_name" => $records->input('first_name'),
+            "last_name" => $records->input('last_name'),
+            "email" => $records->input('email'),
+            "password" => $records->input('password'),
+            "confirm_password" => $records->input('confirm_password'),
+            "mobile_no" => $records->input('mobile_no'),
+            "gender" => $records->input('gender'),
+            "age" => $records->input('age'),
+            "pincode" => $records->input('pincode'),
+            "city" => $records->input('city'),
+            "hobby" => $hobby,
         ]);
 
         return redirect('Login');

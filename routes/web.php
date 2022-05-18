@@ -8,7 +8,8 @@ use App\Http\Controllers\maths_operation2;
 use App\Http\Controllers\displaytext;
 use App\Http\Controllers\userForm;
 use App\Http\Controllers\Login;
-use App\Http\Controllers\dbtest;
+use App\http\controllers\Logout;
+use App\Http\Controllers\employee;
 use App\Http\Controllers\Httpcontroller;
 use App\Http\Controllers\usercontroller;
 
@@ -27,38 +28,34 @@ Route::view('/','users.Home');
 Route::view('Home','users.Home');
 Route::view('about','users.about');
 Route::view('Product','users.Product');
-Route::view("userForm","users.userForm");
-Route::view('Login','users.Login');
 Route::view('data','users.data');
 Route::view('info','users.info');
 
+Route::view('dashboard','users.dashboard')->middleware('Logout');
+
 # session topic
-Route::post('userForm',[userForm::class,'getdata']);
+Route::view('signUp','users.signUp');
+Route::post('userForm',[userForm::class,'getdata']); 
+Route::view('Login','users.Login')->middleware('Login');
 Route::post('Login',[Login::class,'loginuser']);
 
-Route::get('/Logind', function () {
-    if(session()->has('user')){
-        return redirect('dashboard');
-    }
-        return view('Login');
-    
-});
-Route::get('/logout', function () {
-    if(session()->has('user')){
-        session()->pull('user');
-    }
-        return redirect('Login');
-});
 
-Route::view('dashboard','users.dashboard');
+# fetch data from database
+Route::get('admin_dashboard',[employee::class,'employee_data'])->middleware('admin_Logout');
+
+#sign out user
+Route::get('Logout',[Logout::class,'logout']);
+
+
+
+
+
 
 Route::view('priya','priya')->middleware('test');
 
 #fetch data from database through controller with model
 Route::get('modal',[usercontroller::class,'data']);
 
-# fetch data from database
-Route::get('dbtest',[dbtest::class,'dbCheck']);
 
 #fetch data from Api
 Route::get('api',[Httpcontroller::class ,'index']);

@@ -15,51 +15,46 @@
             font-family: sans-serif;
 
         }
-        ul li{
-            margin:12px;
+        img{
+            margin-right: 1200px;
         }
-        ul li a:hover{
-            color:crimson;
+        ul li {
+            margin: 12px;
         }
+
+        ul li a:hover {
+            color: crimson;
+        }
+
         ul li a {
-            font-size:medium;
+            font-size: medium;
+        }
+
+        h3, h2 {
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
 
-        @include('users.header');
-        <div>
-            <h1>{{session('user')}}</h1>
-            <a href="/logout">logout here</a>
-            <a href="/logind">login here</a>
 
-        </div>
-        
-        <div>
-            <table>
+    <nav>
+        <ul class="nav">
+            <img src="images/logo.png" height="80px" width="180px" alt="">
+            <li><a class="nav-link text-danger" href="{{ url('Logout') }}">Sign out</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container bg-danger">
+        <h2>hello {{session('email')}}</h2>
+        <h3>welcome to our bakery shop</h3>
+    </div>
 
-                <thead>
-                    <tr>
-                        <th>First_name</th>
-                        <th>Last_name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                    </tr>
-                </thead>
-
-                <!-- <tbody>
-                    @foreach($user as $users)
-                    <tr>
-                        <td>{{$users->first_name}}</td>
-                        <td>{{$users->last_name}}</td>
-                        <td>{{$users->email}}</td>
-                        <td>{{$users->password}}</td>
-                    </tr>
-                    @endforeach
-                </tbody> -->
-            </table>
-        </div>
 </body>
+
 </html>

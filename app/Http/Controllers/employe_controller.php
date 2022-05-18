@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB as FacadesDB;
+use App\Models\Customer;
 
 
-class dbtest extends Controller
+class employee extends Controller
 {
-    function dbCheck()
+    function employee_data()
     {
-        $users =  FacadesDB::select("select * from student_detail");
+        $users =  FacadesDB::select("select * from customer");
         return view('users.admin_dashboard',["records" => $users]);
 
     }

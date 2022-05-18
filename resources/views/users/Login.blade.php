@@ -37,7 +37,7 @@
         @csrf
             <div class="form-group col-md-10">
                 <label for="inputEmail4">User Name</label>
-                <input type="email" class="form-control" name="email">
+                <input type="text" class="form-control" name="email">
                 <small class="form-text  text-dark"> @error('email'){{$message}} @enderror </small>
 
             </div>

@@ -6,17 +6,22 @@ use Illuminate\Http\Request;
 
 class Login extends Controller
 {
-    function loginuser(Request $req)
+    function loginuser(Request $data)
     {
-        $req->validate([
+        $data->validate([
             'email' => 'required | email',
             'password' => 'required'
         ]);
 
-        $data = $req->input();
-        $req->session()->put('user',$data);
-        return redirect('dashboard');
+        if ($data['email'] === 'admin' && $data['password'] === '123') 
+        {
+            $data->session()->put('admin', "ADMIN");
+            return redirect('admin_dashboard');
+        } 
+        else
+        {
+            $data->session()->put('email', $data['email']);
+            return redirect('dashboard');
+        }
     }
-
-     
 }
