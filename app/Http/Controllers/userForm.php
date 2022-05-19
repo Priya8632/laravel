@@ -29,7 +29,6 @@ class userForm extends Controller
             "last_name" => $records->input('last_name'),
             "email" => $records->input('email'),
             "password" => $records->input('password'),
-            "confirm_password" => $records->input('confirm_password'),
             "mobile_no" => $records->input('mobile_no'),
             "gender" => $records->input('gender'),
             "age" => $records->input('age'),

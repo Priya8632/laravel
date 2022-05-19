@@ -42,6 +42,7 @@ Route::post('Login',[Login::class,'loginuser']);
 
 # fetch data from database
 Route::get('admin_dashboard',[employee::class,'employee_data'])->middleware('admin_Logout');
+// Route::view('admin_dashboard','users.admin_dashboard');
 
 #sign out user
 Route::get('Logout',[Logout::class,'logout']);
