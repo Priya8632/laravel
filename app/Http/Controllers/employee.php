@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB as FacadesDB;
-
+use App\Models\Customer;
 
 class employee extends Controller
 {
