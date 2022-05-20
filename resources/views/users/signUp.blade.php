@@ -37,7 +37,7 @@
 
     <div class="container m-3 p-5 text-dark mx-auto">
 
-        <form action="userForm" method="POST">
+        <form action="userForm" method="POST" enctype="multipart/form-data">
             @csrf
             <h1 class="p-2">Ragistration Form</h1>
 
@@ -126,6 +126,14 @@
                     <input type="checkbox" name="hobby[]" value="Playing">Playning<br>
                     <input type="checkbox" name="hobby[]" value="Cooking">Cooking<br>
                     <small class="form-text text-dark"> @error('hobby'){{$message}} @enderror </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="">Photo</label>
+                    <input type="file" name="image">
+                    <small class="form-text text-dark"> @error('image'){{$message}} @enderror </small>
                 </div>
             </div>
 

@@ -16,6 +16,7 @@
         }
         h1{
             margin-bottom:20px;
+            text-align: center;
         }
         ul li{
             margin:12px;
@@ -39,13 +40,11 @@
                 <label for="inputEmail4">User Name</label>
                 <input type="text" class="form-control" name="email">
                 <small class="form-text  text-dark"> @error('email'){{$message}} @enderror </small>
-
             </div>
             <div class="form-group col-md-10">
                 <label for="inputPassword4">Password</label>
                 <input type="password" class="form-control" name="password">
                 <small class="form-text  text-dark"> @error('password'){{$message}} @enderror </small>
-
             </div>
             <div class="form-group col-md-10">
                 <input type="checkbox">Agree term and condition

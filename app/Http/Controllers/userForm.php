@@ -19,10 +19,15 @@ class userForm extends Controller
             'age' => 'required | numeric',
             'city' => 'required | in:Surat,Rajkot,Amreli,Vadodara,Valsad',
             'pincode' => 'required | numeric',
-            'hobby' => 'required'
+            'hobby' => 'required',
+            'image' => 'required'
         ]);
 
         $hobby = implode(", ", $records->input('hobby'));
+        $fileName = $records->file('image')->getClientOriginalName();
+        $img_path = $records->file('image')->move('photos', $fileName);
+
+
 
         DB::table("customers")->insert([
             "first_name" => $records->input('first_name'),
@@ -35,6 +40,8 @@ class userForm extends Controller
             "pincode" => $records->input('pincode'),
             "city" => $records->input('city'),
             "hobby" => $hobby,
+            "image" => $img_path
+
         ]);
 
         return redirect('Login');

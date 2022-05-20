@@ -63,6 +63,7 @@
                 <th class="bg-dark text-white">city</th>
                 <th class="bg-dark text-white">Pincode</th>
                 <th class="bg-dark text-white">Hobby</th>
+                <th class="bg-dark text-white">Image</th>
             </tr>
         </thead>
 
@@ -80,6 +81,7 @@
                 <td class="bg-light">{{$record->city}}</td>
                 <td class="bg-light">{{$record->pincode}}</td>
                 <td class="bg-light">{{$record->hobby}}</td>
+                <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="100" alt=""> </td>
             </tr>
             @endforeach
         </tbody>

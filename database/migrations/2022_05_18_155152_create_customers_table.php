@@ -25,6 +25,7 @@ class CreateCustomersTable extends Migration
             $table->string('city');
             $table->integer('pincode');
             $table->string('hobby');
+            $table->string('image',100);
             $table->timestamps();
         });
     }
