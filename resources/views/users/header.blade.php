@@ -13,7 +13,7 @@
 
 <nav>
     <ul class="nav">
-        <img src="images/logo.png" height="80px" width="180px" alt="">
+        <img src="photos/images/logo.png" height="80px" width="180px" alt="">
         <li class="nav-item"><a href="Home" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
         <li class="nav-item"><a href="Product" class="nav-link">SHOP</a></li>

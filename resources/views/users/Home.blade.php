@@ -19,7 +19,7 @@
         }
         .back
         {
-            background-image: url('../images/c12.jpg');
+            background-image: url('../photos/images/c12.jpg');
             background-repeat: no-repeat;
             background-position:center;
             background-size:cover;

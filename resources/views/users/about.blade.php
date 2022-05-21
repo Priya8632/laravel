@@ -117,22 +117,22 @@
 
         <div class="slides-container">
             <div class="slide-image">
-                <img src="images/c1.jpg" alt="">
+                <img src="photos/images/c1.jpg" alt="">
             </div>
             <div class="slide-image">
-                <img src="images/c2.jpg" alt="">
+                <img src="photos/images/c2.jpg" alt="">
             </div>
             <div class="slide-image">
-                <img src="images/c3.jpg" alt="">
+                <img src="photos/images/c3.jpg" alt="">
             </div>
             <div class="slide-image">
-                <img src="images/c4.jpg" alt="">
+                <img src="photos/images/c4.jpg" alt="">
             </div>
             <div class="slide-image">
-                <img src="images/c5.jpg" alt="">
+                <img src="photos/images/c5.jpg" alt="">
             </div>
             <div class="slide-image">
-                <img src="images/c7.jpg" alt="">
+                <img src="photos/images/c7.jpg" alt="">
             </div>
         </div>
 

@@ -33,7 +33,7 @@
 
     <nav>
         <ul class="nav">
-            <img src="images/logo.png" height="80px" width="180px" alt="">
+            <img src="photos/images/logo.png" height="80px" width="180px" alt="">
             <li><a class="nav-link text-danger" href="{{ url('Logout') }}">Sign out</a></li>
         </ul>
     </nav>
@@ -81,7 +81,7 @@
                 <td class="bg-light">{{$record->city}}</td>
                 <td class="bg-light">{{$record->pincode}}</td>
                 <td class="bg-light">{{$record->hobby}}</td>
-                <td class="bg-light"><img src="{{ asset($record->image) }}" width="10" height="100" alt=""> </td>
+                <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="100" alt=""> </td>
             </tr>
             @endforeach
         </tbody>

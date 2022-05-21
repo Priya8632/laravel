@@ -45,7 +45,7 @@
 
     <nav>
         <ul class="nav">
-            <img src="images/logo.png" height="80px" width="180px" alt="">
+            <img src="photos/images/logo.png" height="80px" width="180px" alt="">
             <li><a class="nav-link text-danger" href="{{ url('Logout') }}">Sign out</a></li>
         </ul>
     </nav>

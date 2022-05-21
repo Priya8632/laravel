@@ -92,7 +92,7 @@
 <div class="container-fluid">
     <div data-aos="zoom-in">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="images/c4.jpg" alt="Card image cap">
+            <img class="card-img-top" src="photos/images/c4.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Cookies</h5>
                 <p class="card-text">Price : 7.89 $</p>
@@ -103,7 +103,7 @@
 
     <div data-aos="zoom-in">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="images/c6.jpg" alt="Card image cap">
+            <img class="card-img-top" src="photos/images/c6.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Chocolate</h5>
                 <p class="card-text">Price : 6.23 $</p>
@@ -114,7 +114,7 @@
 
     <div data-aos="fade-left">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="images/c7.jpg" alt="Card image cap">
+            <img class="card-img-top" src="photos/images/c7.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Black-forest</h5>
                 <p class="card-text">Price : 8.23 $</p>
@@ -125,7 +125,7 @@
 
     <div data-aos="fade-right">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="images/c8.jpg" alt="Card image cap">
+            <img class="card-img-top" src="photos/images/c8.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Black-forest</h5>
                 <p class="card-text">Price : 9.00 $</p>
