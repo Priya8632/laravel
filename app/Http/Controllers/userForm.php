@@ -20,7 +20,7 @@ class userForm extends Controller
             'city' => 'required | in:Surat,Rajkot,Amreli,Vadodara,Valsad',
             'pincode' => 'required | numeric',
             'hobby' => 'required',
-            'image' => 'required'
+            'image' => 'required',
         ]);
 
         $hobby = implode(", ", $records->input('hobby'));

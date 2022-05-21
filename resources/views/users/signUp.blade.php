@@ -11,8 +11,7 @@
     <style>
         .container
         {
-            background-color:plum;
-            
+            background-color:plum;   
         }
         h1{
             /* margin-bottom:20px; */
@@ -136,7 +135,6 @@
                     <small class="form-text text-dark"> @error('image'){{$message}} @enderror </small>
                 </div>
             </div>
-
             <div class="form-group">
                 <input type="checkbox">Agree term and condition
             </div>
