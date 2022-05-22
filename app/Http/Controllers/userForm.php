@@ -44,6 +44,6 @@ class userForm extends Controller
 
         ]);
 
-        return redirect('Login');
+        return redirect('login');
     }
 }

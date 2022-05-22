@@ -13,15 +13,17 @@
             margin: 0;
             box-sizing: border-box;
             font-family: sans-serif;
-
         }
-        img{
-            margin-right: 1200px;
+        img {
+            margin-right: 900px;
         }
         ul li {
-            margin: 12px;
+            margin: 10px;
         }
+        ul li a{
+            color:black;
 
+        }
         ul li a:hover {
             color: crimson;
         }
@@ -30,11 +32,13 @@
             font-size: medium;
         }
 
-        h3, h2 {
-            color: white;
+        h3,h2 {
+            color: black;
         }
-
-        .container {
+        h4 {
+            color: blue;
+        }
+        .container-fluid {
             padding: 20px;
         }
     </style>
@@ -46,12 +50,16 @@
     <nav>
         <ul class="nav">
             <img src="photos/images/logo.png" height="80px" width="180px" alt="">
-            <li><a class="nav-link text-danger" href="{{ url('Logout') }}">Sign out</a></li>
+            <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="user_product" class="nav-link">SHOP</a></li>
+            <li><a class="nav-link text-danger" href="{{ url('logout') }}">SIGN OUT</a></li>
         </ul>
     </nav>
-    
-    <div class="container bg-danger">
-        <h2>hello {{session('email')}}</h2>
+
+    <div class="container-fluid bg-warning">
+        <h2>hello : </h2>
+        <h4>{{session('email')}}</h4>
         <h3>welcome to our bakery shop</h3>
     </div>
 

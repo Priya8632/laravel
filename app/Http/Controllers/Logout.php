@@ -9,11 +9,11 @@ class Logout extends Controller
     function logout(){
         if (session()->has('email')) {
             session()->pull('email');
-            return redirect('Login');
+            return redirect('login');
         }
         if (session()->has('admin')) {
             session()->pull('admin');
-            return redirect('Login');
+            return redirect('login');
         }
     }
 }

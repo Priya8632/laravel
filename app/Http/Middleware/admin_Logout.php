@@ -17,7 +17,7 @@ class admin_Logout
     public function handle(Request $request, Closure $next)
     {
         if (!session()->has('admin')) {
-            return redirect('Login');
+            return redirect('login');
         }
         return $next($request);
     }

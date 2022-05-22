@@ -34,7 +34,7 @@
 @include('users.header');
 <div class="container m-3 p-5 text-dark mx-auto">
     <h1>Login Here</h1>
-    <form action="Login" method="POST">
+    <form action="login" method="POST">
         @csrf
             <div class="form-group col-md-10">
                 <label for="inputEmail4">User Name</label>

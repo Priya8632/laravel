@@ -17,7 +17,7 @@ class Logout
     public function handle(Request $request, Closure $next)
     {
         if (!session()->has('email')) {
-            return  redirect('Login');
+            return  redirect('login');
         }
         return $next($request);
     }

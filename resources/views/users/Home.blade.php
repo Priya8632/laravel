@@ -59,7 +59,7 @@
     <div data-aos="fade-up">
         <h3>Have A Cake-A-Dilicious</h3>
         <h1>UP to 50% Off</h1>
-        <a href="Product" class="btn btn-dark" style="margin-left:60px;">Shop Now</a></div>
+        <a href="product" class="btn btn-dark" style="margin-left:60px;">Shop Now</a></div>
     </div>  
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

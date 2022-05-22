@@ -9,7 +9,7 @@ class Login extends Controller
     function loginuser(Request $data)
     {
         $data->validate([
-            'email' => 'required',
+            'email' => 'required | email',
             'password' => 'required'
         ]);
 

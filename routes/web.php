@@ -25,19 +25,19 @@ use App\Http\Controllers\usercontroller;
 */
 #user interface
 Route::view('/','users.Home');
-Route::view('Home','users.Home');
+Route::view('home','users.Home');
 Route::view('about','users.about');
-Route::view('Product','users.Product');
+Route::view('product','users.Product');
 Route::view('data','users.data');
 Route::view('info','users.info');
 
-Route::view('dashboard','users.dashboard')->middleware('Logout');
+Route::view('dashboard','users.dashboard')->middleware('logout');
 
 # session topic
-Route::view('signUp','users.signUp');
+Route::view('signup','users.signUp');
 Route::post('userForm',[userForm::class,'getdata']); 
-Route::view('Login','users.Login')->middleware('Login');
-Route::post('Login',[Login::class,'loginuser']);
+Route::view('login','users.Login')->middleware('login');
+Route::post('login',[Login::class,'loginuser']);
 
 
 # fetch data from database
@@ -45,8 +45,8 @@ Route::get('admin_dashboard',[employee::class,'employee_data'])->middleware('adm
 // Route::view('admin_dashboard','users.admin_dashboard');
 
 #sign out user
-Route::get('Logout',[Logout::class,'logout']);
-
+Route::get('logout',[Logout::class,'logout']);
+Route::view('user_product' , 'users.user_product');
 
 
 

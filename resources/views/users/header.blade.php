@@ -14,11 +14,11 @@
 <nav>
     <ul class="nav">
         <img src="photos/images/logo.png" height="80px" width="180px" alt="">
-        <li class="nav-item"><a href="Home" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
-        <li class="nav-item"><a href="Product" class="nav-link">SHOP</a></li>
-        <li class="nav-item"><a href="signUp" class="nav-link">RAGISTER</a></li>
-        <li class="nav-item"><a href="Login" class="nav-link">LOGIN</a></li>
+        <li class="nav-item"><a href="product" class="nav-link">SHOP</a></li>
+        <li class="nav-item"><a href="signup" class="nav-link">RAGISTER</a></li>
+        <li class="nav-item"><a href="login" class="nav-link">LOGIN</a></li>
     </ul>
 </nav>
 
