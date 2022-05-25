@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class userForm extends Controller
 {
     function getdata(Request $records)
@@ -11,7 +12,7 @@ class userForm extends Controller
         $records->validate([
             'first_name' => 'required | min:5 | max:10 | alpha',
             'last_name' => 'required | min:5 | max:13 | alpha',
-            'email' =>"required",
+            'email' => "required",
             'password' => 'required',
             'confirm_password' => 'required | same:password',
             'mobile_no' => 'required | numeric',
@@ -25,8 +26,26 @@ class userForm extends Controller
 
         $hobby = implode(", ", $records->input('hobby'));
         $fileName = $records->file('image')->getClientOriginalName();
-        $img_path = $records->file('image')->move('photos', $fileName);
+        // $img_path = $records->file('image')->move('photos', $fileName);
 
+        $folderName = $records->input('folderName');
+        if (isset($folderName)) {
+
+            if ($records->input('fileName') == 'original') {
+                $img_path = $records->file('image')->storeAs($folderName, $fileName);
+            } else {
+
+                $img_path = $records->file('image')->store($folderName);
+            }
+        } else {
+
+            if ($records->input('fileName') == 'original') {
+                $img_path = $records->file('image')->storeAs('images', $fileName);
+            } else {
+
+                $img_path = $records->file('image')->store('images');
+            }
+        }
 
 
         DB::table("customers")->insert([

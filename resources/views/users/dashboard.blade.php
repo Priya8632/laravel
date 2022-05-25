@@ -62,7 +62,7 @@
         <h4>{{session('email')}}</h4>
         <h3>welcome to our bakery shop</h3>
     </div>
-
+    
 </body>
 
 </html>

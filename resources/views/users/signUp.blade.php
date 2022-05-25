@@ -9,23 +9,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-        .container
-        {
-            background-color:plum;   
+        .container {
+            background-color: plum;
         }
-        h1{
+
+        h1 {
             /* margin-bottom:20px; */
             text-align: center;
         }
-        ul li{
-            margin:12px;
+
+        ul li {
+            margin: 12px;
         }
-        ul li a:hover{
-            color:crimson;
+
+        ul li a:hover {
+            color: crimson;
         }
+
         ul li a {
-            font-size:medium;
-            font-weight:600;
+            font-size: medium;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -43,16 +46,16 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <div class="form-group">
-                    <label for="">Firstname</label>
-                    <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
-                    <small class="form-text  text-dark"> @error('first_name'){{$message}} @enderror </small>
+                        <label for="">Firstname</label>
+                        <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
+                        <small class="form-text  text-dark"> @error('first_name'){{$message}} @enderror </small>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <div class="form-group">
-                    <label for="">Lastname</label>
-                    <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">
-                    <small class="form-text  text-dark"> @error('last_name'){{$message}} @enderror </small>
+                        <label for="">Lastname</label>
+                        <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">
+                        <small class="form-text  text-dark"> @error('last_name'){{$message}} @enderror </small>
                     </div>
                 </div>
             </div>
@@ -86,9 +89,9 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Gender</label><br>
-                    <input type="radio"  name="gender">Male
-                    <input type="radio"  name="gender">Female
-                    <input type="radio"  name="gender">Others
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                    <input type="radio" name="gender">Others
                     <small class="form-text text-dark"> @error('gender'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -135,6 +138,26 @@
                     <small class="form-text text-dark"> @error('image'){{$message}} @enderror </small>
                 </div>
             </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="folderCkeck" id="folderCkeck">
+                <label for="folderCkeck" class="form-check-label">Want you store image in spacific folder?</label>
+            </div>
+
+            <div class="form-group">
+                <label for="folderName">Folder Name</label>
+                <input type="text" class="form-control" name="folderName" id="folderName" disabled>
+            </div>
+
+            <div class="form-group">
+                <small> @error('fileName'){{$message}} @enderror </small>
+                <select name="fileName" class="form-control" id="">
+                    <option value="" selected disabled>--Select Name Of Image</option>
+                    <option value="original">Original Name</option>
+                    <option value="random">Random Name</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <input type="checkbox">Agree term and condition
             </div>
@@ -143,6 +166,17 @@
             </div>
         </form>
     </div>
+    <script>
+        let checkBox = document.getElementById("folderCkeck");
+        let folder_name = document.getElementById("folderName");
+
+        checkBox.addEventListener('click', () => {
+
+            folder_name.disabled = false;
+
+        });
+    </script>
+
 
 </body>
 

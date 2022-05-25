@@ -11,6 +11,7 @@
     <style>
         ul li {
             margin: 12px;
+            float:right;
         }
 
         ul li a:hover {
@@ -21,11 +22,6 @@
             font-size: medium;
             font-weight: 600;
         }
-
-        img {
-            margin-right: 1220px;
-            float: left;
-        }
     </style>
 </head>
 
@@ -33,12 +29,12 @@
 
     <nav>
         <ul class="nav">
-            <img src="photos/images/logo.png" height="80px" width="180px" alt="">
-            <li><a class="nav-link text-danger" href="{{ url('Logout') }}">Sign out</a></li>
+            <img src="photos/images/logo.png" height="80px" width="180px" alt="" style="float:left;margin-right:1220px;">
+            <li><a class="nav-link text-danger" href="{{ url('logout') }}">Sign out</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
         <h4>{{session('admin')}}</h4>
     </div>
 
@@ -81,14 +77,14 @@
                 <td class="bg-light">{{$record->city}}</td>
                 <td class="bg-light">{{$record->pincode}}</td>
                 <td class="bg-light">{{$record->hobby}}</td>
-                <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="100" alt=""> </td>
+                <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="75" alt="not connect"> </td>
             </tr>
             @endforeach
         </tbody>
 
     </table>
 
-
+    
 </body>
 
 </html>
