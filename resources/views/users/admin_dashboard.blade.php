@@ -9,28 +9,21 @@
     <link rel="stylesheet" href="{{ asset('CSS/main.css')}}">
     <title>ADMIN</title>
     <style>
-        ul li {
-            margin: 12px;
-            float:right;
-        }
-
-        ul li a:hover {
+        .nav-item a:hover {
             color: crimson;
         }
-
-        ul li a {
-            font-size: medium;
-            font-weight: 600;
+        .nav-item a {
+            font-size:medium;
         }
     </style>
 </head>
 
 <body>
 
-    <nav>
+    <nav class="navbar">
         <ul class="nav">
             <img src="photos/images/logo.png" height="80px" width="180px" alt="" style="float:left;margin-right:1220px;">
-            <li><a class="nav-link text-danger" href="{{ url('logout') }}">Sign out</a></li>
+            <li class="nav-item"><a class="nav-link text-danger" href="{{ url('logout') }}">SIGN OUT</a></li>
         </ul>
     </nav>
 

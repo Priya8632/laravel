@@ -20,19 +20,12 @@
         img {
             margin-right: 900px;
         }
-        ul li {
-            margin: 10px;
-        }
-
-        ul li a:hover {
+        .nav-item a:hover {
             color: crimson;
         }
-
-        ul li a {
+        .nav-item a {
             font-size: medium;
-            color:black;
         }
-
         .container-fluid {
             display: flex;
             padding: 50px;
@@ -42,14 +35,22 @@
             margin: 29px;
             text-align: center;
         }
+        .nav-item a {
+            color: black;
+            font-size: medium;
+        }
+        .nav img {
+            display: flex;
+            flex-direction: row-reverse;
+        }
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <ul class="nav">
-            <img src="photos/images/logo.png" height="80px" width="180px" alt="">
+    <nav class="navbar">
+        <img src="photos/images/logo.png" height="80px" width="180px" alt="">
+        <ul class="nav justify-content-end">
             <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
             <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
             <li class="nav-item"><a href="user_product" class="nav-link">SHOP</a></li>

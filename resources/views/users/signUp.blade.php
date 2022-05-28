@@ -17,18 +17,11 @@
             /* margin-bottom:20px; */
             text-align: center;
         }
-
-        ul li {
-            margin: 12px;
-        }
-
-        ul li a:hover {
+        .nav-item a:hover {
             color: crimson;
         }
-
-        ul li a {
+        .nav-item a {
             font-size: medium;
-            font-weight: 600;
         }
     </style>
 </head>

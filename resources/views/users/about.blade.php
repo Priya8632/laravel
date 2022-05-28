@@ -15,25 +15,19 @@
             box-sizing: border-box;
             font-family: sans-serif;
         }
-
-        ul li {
-            margin: 12px;
-        }
-
-        ul li a:hover {
+        .nav-item a:hover {
             color: crimson;
         }
-
-        ul li a {
+        .nav-item a {
             font-size: medium;
         }
-
         h1,h5,h6 {
             text-align: center;
         }
-        h5{
+        h5 {
             font-family: fantasy;
         }
+
         hr {
             background-color: crimson;
             height: 3px;
@@ -115,9 +109,9 @@
     <div class="container">
         <div class="row">
             <div class="col-2 mx-auto">
-                    <img src="photos/images/ceo.jpg" alt="" class="rounded-circle" height="120px" width="150px">
-                    <h5>Jonsan Petal</h5>     
-                    <h6>CEO of bakery shop</h6>
+                <img src="photos/images/ceo.jpg" alt="" class="rounded-circle" height="120px" width="150px">
+                <h5>Jonsan Petal</h5>
+                <h6>CEO of bakery shop</h6>
 
             </div>
         </div>

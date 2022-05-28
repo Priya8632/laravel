@@ -1,27 +1,24 @@
 <style>
-
-    ul li a{
+    .nav-item a {
         color:black;
+        font-size: medium;
     }
-    img{
-        margin-right: 750px;
-        float:left;
+    .nav img {
+        display: flex;
+        flex-direction: row-reverse;
     }
-    
 </style>
 
-
-<nav>
-    <ul class="nav">
+    <nav class="navbar">
         <img src="photos/images/logo.png" height="80px" width="180px" alt="">
-        <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
-        <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
-        <li class="nav-item"><a href="product" class="nav-link">SHOP</a></li>
-        <li class="nav-item"><a href="signup" class="nav-link">RAGISTER</a></li>
-        <li class="nav-item"><a href="login" class="nav-link">LOGIN</a></li>
-    </ul>
-</nav>
-
+        <ul class="nav justify-content-end">
+            <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="product" class="nav-link">SHOP</a></li>
+            <li class="nav-item"><a href="signup" class="nav-link">RAGISTER</a></li>
+            <li class="nav-item"><a href="login" class="nav-link">LOGIN</a></li>
+        </ul>
+    </nav>
 
 <!--Tab panes-->
 <div class="tab-content">

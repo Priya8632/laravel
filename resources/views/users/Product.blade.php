@@ -12,19 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
-        ul li {
-            margin: 12px;
-        }
-
-        ul li a:hover {
+        .nav-item a:hover {
             color: crimson;
         }
-
-        ul li a {
+        .nav-item a {
             font-size: medium;
-            font-weight: 600;
         }
-
         .container-fluid {
             display: flex;
             padding: 50px;
@@ -39,6 +32,7 @@
 
 <body>
     @include('users.header')
+    
     <div class="container-fluid">
         <div data-aos="zoom-in">
             <div class="card" style="width: 18rem;">
