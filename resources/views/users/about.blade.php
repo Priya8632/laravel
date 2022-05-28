@@ -14,207 +14,115 @@
             margin: 0;
             box-sizing: border-box;
             font-family: sans-serif;
+        }
 
+        ul li {
+            margin: 12px;
         }
-        ul li{
-            margin:12px;
+
+        ul li a:hover {
+            color: crimson;
         }
-        ul li a:hover{
-            color:crimson;
-        }
+
         ul li a {
-            font-size:medium;
-            /* font-weight:600; */
+            font-size: medium;
         }
 
-        .wrapper {
-            width: 100%;
-            overflow: hidden;
+        h1,h5,h6 {
+            text-align: center;
+        }
+        h5{
+            font-family: fantasy;
+        }
+        hr {
+            background-color: crimson;
+            height: 3px;
+            width: 80px;
         }
 
-        .slides-container {
-            height: 600px;
-            transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+        .image {
             position: relative;
         }
 
-        .slide-image {
-            height: 100%;
-            width: 100%;
+        .overlay {
             position: absolute;
-        }
-
-        .slide-image img {
             width: 100%;
             height: 100%;
-            object-fit:cover;
-        }
-
-        .next-btn,
-        .prev-btn {
-            background-color: #eee;
-            padding: 16px;
-            position: absolute;
-            top: 60%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-            z-index: 100;
-            cursor: pointer;
-            transition: 400ms;
-        }
-
-        .next-btn:hover,
-        .prev-btn:hover {
-            background-color: pink;
-        }
-
-        .prev-btn {
-            left: 0;
-        }
-
-        .next-btn {
-            right: 0;
-        }
-
-        .navigation-dots {
-            display: flex;
-            height: 32px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.25s;
+            backdrop-filter: blur(3px);
             align-items: center;
             justify-content: center;
-            margin: 16px 0;
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+
+        .overlay>* {
+            transform: translateY(25px);
+            transition: transform 0.25s;
+        }
+
+        .overlay:hover>* {
+            transform: translateY(0);
 
         }
 
-        .single-dot {
-            background-color: #333;
-            height: 16px;
-            width: 16px;
-            border: 2px solid #000;
-            border-radius: 50%;
-            margin: 0 8px;
-            cursor: pointer;
-            transition: 400ms;
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 180px;
+            margin-right: 40px;
+            font-family: sans-serif;
         }
-
-        .single-dot.active {
-            background-color: #eee;
-        }
-
     </style>
 </head>
 
 <body>
-    <div>
-        @include('users.header');
+
+    @include('users.header');
+    <div class="container">
+        <h1>About Us</h1>
+        <hr>
     </div>
 
-    <div class="wrapper">
-
-        <div class="prev-btn">
-            <i class="fas fa-chevron-left"></i>
-        </div>
-
-        <div class="slides-container">
-            <div class="slide-image">
-                <img src="photos/images/c1.jpg" alt="">
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-4 image">
+                <img src="photos/images/c7.jpg" alt="" height="400px" width="300px">
+                <div class="overlay">
+                    <p class="title">Black Forest</p>
+                </div>
             </div>
-            <div class="slide-image">
-                <img src="photos/images/c2.jpg" alt="">
+            <div class="col-4 image">
+                <img src="photos/images/c2.jpg" alt="" height="400px" width="300px">
+                <div class="overlay">
+                    <p class="title">Cookies</p>
+                </div>
             </div>
-            <div class="slide-image">
-                <img src="photos/images/c3.jpg" alt="">
-            </div>
-            <div class="slide-image">
-                <img src="photos/images/c4.jpg" alt="">
-            </div>
-            <div class="slide-image">
-                <img src="photos/images/c5.jpg" alt="">
-            </div>
-            <div class="slide-image">
-                <img src="photos/images/c7.jpg" alt="">
+            <div class="col-4 image">
+                <img src="photos/images/c8.jpg" alt="" height="400px" width="300px">
+                <div class="overlay">
+                    <p class="title">Chocolate</p>
+                </div>
             </div>
         </div>
-
-        <div class="next-btn">
-            <i class="fas fa-chevron-right"></i>
-        </div>
-
     </div>
 
-        <div class="navigation-dots"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 mx-auto">
+                    <img src="photos/images/ceo.jpg" alt="" class="rounded-circle" height="120px" width="150px">
+                    <h5>Jonsan Petal</h5>     
+                    <h6>CEO of bakery shop</h6>
 
-    <script>
-        const slideimage = document.querySelectorAll(".slide-image");
-        const slidescontainer = document.querySelector(".slides-container");
-        const nextbtn = document.querySelector(".next-btn");
-        const prevbtn = document.querySelector(".prev-btn");
-        const navigationdots = document.querySelector(".navigation-dots");
+            </div>
+        </div>
+    </div>
 
-        let numberofimages = slideimage.length;
-        let slidewidth = slideimage[0].clientWidth;
-        let currentslide = 0;
-
-
-        function init() {
-            slideimage.forEach((img, i) => {
-                img.style.left = i * 100 + "%";
-            });
-
-            slideimage[0].classList.add("active");
-            createnavigationdots();
-        }
-        init();
-
-        function createnavigationdots() {
-            for (let i = 0; i < numberofimages; i++) {
-                const dot = document.createElement("div");
-                dot.classList.add("single-dot");
-                navigationdots.appendChild(dot);
-
-                dot.addEventListener("click", () => {
-                    gotoslide(i);
-                });
-            }
-            navigationdots.children[0].classList.add("active");
-        }
-        //next button
-        nextbtn.addEventListener("click", () => {
-            if (currentslide >= numberofimages - 1) {
-                gotoslide(0);
-                return;
-            }
-            currentslide++;
-            gotoslide(currentslide);
-        });
-        //prev button
-
-        prevbtn.addEventListener("click", () => {
-            if (currentslide <= 0) {
-                gotoslide(numberofimages - 1);
-                return;
-            }
-            currentslide--;
-            gotoslide(currentslide);
-        });
-
-        function gotoslide(slidenumber) {
-            slidescontainer.style.transform = "translateX(-" + slidewidth * slidenumber + "px)";
-
-            setactiveclass();
-        }
-
-        function setactiveclass() {
-            let currentactive = document.querySelector(".slide-image.active");
-            currentactive.classList.remove("active");
-            slideimage[currentslide].classList.add("active");
-
-            let currentdot = document.querySelector(".single-dot.active");
-            currentdot.classList.remove("active");
-            navigationdots.children[currentslide].classList.add("active");
-
-        }
-    </script>
 
 
 </body>

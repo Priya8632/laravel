@@ -50,7 +50,9 @@
                 <input type="checkbox">Agree term and condition
             </div>
             <div class="form-group col-md-10">
-                <button type="submit" class="btn btn-dark">Sign in</button>
+                <button type="submit" class="btn btn-dark">Sign in</button><br>
+                <a href="signup">Don't have an account</a>
+
             </div>
     </form>
 </div>

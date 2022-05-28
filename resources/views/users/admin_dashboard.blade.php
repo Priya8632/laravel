@@ -42,7 +42,7 @@
 
         <thead>
             <tr class="bg-warning">
-                <th colspan="12">
+                <th colspan="14">
                     <h1>Customer's Records</h1>
                 </th>
             </tr>
@@ -60,6 +60,8 @@
                 <th class="bg-dark text-white">Pincode</th>
                 <th class="bg-dark text-white">Hobby</th>
                 <th class="bg-dark text-white">Image</th>
+                <th class="bg-dark text-white">Edit</th>
+
             </tr>
         </thead>
 
@@ -78,6 +80,7 @@
                 <td class="bg-light">{{$record->pincode}}</td>
                 <td class="bg-light">{{$record->hobby}}</td>
                 <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="75" alt="not connect"> </td>
+                <td class="bg-light"><a href="delete/{{$record->cust_id}}" class="btn btn-danger">Delete</a></td>
             </tr>
             @endforeach
         </tbody>

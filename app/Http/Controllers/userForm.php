@@ -27,23 +27,23 @@ class userForm extends Controller
         $hobby = implode(", ", $records->input('hobby'));
         $fileName = $records->file('image')->getClientOriginalName();
         // $img_path = $records->file('image')->move('photos', $fileName);
-
         $folderName = $records->input('folderName');
+
         if (isset($folderName)) {
 
             if ($records->input('fileName') == 'original') {
-                $img_path = $records->file('image')->storeAs($folderName, $fileName);
+                $img_path = $records->file('image')->storeAs($folderName, $fileName,'uploads');
             } else {
 
-                $img_path = $records->file('image')->store($folderName);
+                $img_path = $records->file('image')->store($folderName,'uploads');
             }
         } else {
 
             if ($records->input('fileName') == 'original') {
-                $img_path = $records->file('image')->storeAs('images', $fileName);
+                $img_path = $records->file('image')->storeAs('images', $fileName,'uploads');
             } else {
 
-                $img_path = $records->file('image')->store('images');
+                $img_path = $records->file('image')->store('images','uploads');
             }
         }
 
@@ -64,5 +64,10 @@ class userForm extends Controller
         ]);
 
         return redirect('login');
+    }
+
+    function distroy($id){
+        DB::table('customers')->where('cust_id',$id)->delete();
+        return redirect("admin_dashboard");
     }
 }

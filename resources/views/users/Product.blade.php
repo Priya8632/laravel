@@ -46,7 +46,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Cookies</h5>
                     <p class="card-text">Price : 7.89 $</p>
-                    <a href="login" class="btn btn-dark">Order</a>
+                    <a href="signup" class="btn btn-dark">Order</a>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-<!-- second row -->>
+<!-- second row
     <div class="container-fluid">
         <div data-aos="zoom-in">
             <div class="card" style="width: 18rem;">
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
