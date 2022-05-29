@@ -42,7 +42,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            color: white;
+            color:pink;
             opacity: 0;
             transition: opacity 0.25s;
             backdrop-filter: blur(3px);
@@ -54,12 +54,12 @@
             opacity: 1;
         }
 
-        .overlay>* {
+        .overlay > * {
             transform: translateY(25px);
             transition: transform 0.25s;
         }
 
-        .overlay:hover>* {
+        .overlay:hover > * {
             transform: translateY(0);
 
         }
@@ -112,12 +112,9 @@
                 <img src="photos/images/ceo.jpg" alt="" class="rounded-circle" height="120px" width="150px">
                 <h5>Jonsan Petal</h5>
                 <h6>CEO of bakery shop</h6>
-
             </div>
         </div>
     </div>
-
-
 
 </body>
 
