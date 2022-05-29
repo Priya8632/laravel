@@ -43,12 +43,12 @@
                 <small class="form-text  text-dark"> @error('password'){{$message}} @enderror </small>
             </div>
             <div class="form-group col-md-10">
-                <input type="checkbox">Agree term and condition
+                <input type="checkbox">Agree term and condition<br>
+                <a href="signup" style="color:blue;">Don't have an account</a>
             </div>
             <div class="form-group col-md-10">
-                <button type="submit" class="btn btn-dark">Sign in</button><br>
-                <a href="signup">Don't have an account</a>
-
+                <button type="submit" class="btn btn-dark">Sign in</button>
+                <button type="reset" class="btn btn-danger">Cancle</button>
             </div>
     </form>
 </div>

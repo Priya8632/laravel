@@ -51,7 +51,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Chocolate</h5>
                     <p class="card-text">Price : 6.23 $</p>
-                    <a href="info" class="btn btn-dark">Order</a>
+                    <a href="signup" class="btn btn-dark">Order</a>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Black-forest</h5>
                     <p class="card-text">Price : 8.23 $</p>
-                    <a href="info" class="btn btn-dark">Order</a>
+                    <a href="signup" class="btn btn-dark">Order</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Black-forest</h5>
                     <p class="card-text">Price : 9.00 $</p>
-                    <a href="info" class="btn btn-dark">Order</a>
+                    <a href="signup" class="btn btn-dark">Order</a>
                 </div>
             </div>
         </div>

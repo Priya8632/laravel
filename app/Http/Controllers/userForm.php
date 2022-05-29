@@ -26,26 +26,27 @@ class userForm extends Controller
 
         $hobby = implode(", ", $records->input('hobby'));
         $fileName = $records->file('image')->getClientOriginalName();
-        // $img_path = $records->file('image')->move('photos', $fileName);
-        $folderName = $records->input('folderName');
+        $img_path = $records->file('image')->move('images', $fileName);
+        
+        // $folderName = $records->input('folderName');
 
-        if (isset($folderName)) {
+        // if (isset($folderName)) {
 
-            if ($records->input('fileName') == 'original') {
-                $img_path = $records->file('image')->storeAs($folderName, $fileName,'uploads');
-            } else {
+        //     if ($records->input('fileName') == 'original') {
+        //         $img_path = $records->file('image')->storeAs($folderName, $fileName,'uploads');
+        //     } else {
 
-                $img_path = $records->file('image')->store($folderName,'uploads');
-            }
-        } else {
+        //         $img_path = $records->file('image')->store($folderName,'uploads');
+        //     }
+        // } else {
 
-            if ($records->input('fileName') == 'original') {
-                $img_path = $records->file('image')->storeAs('images', $fileName,'uploads');
-            } else {
+        //     if ($records->input('fileName') == 'original') {
+        //         $img_path = $records->file('image')->storeAs('images', $fileName,'uploads');
+        //     } else {
 
-                $img_path = $records->file('image')->store('images','uploads');
-            }
-        }
+        //         $img_path = $records->file('image')->store('images','uploads');
+        //     }
+        // }
 
 
         DB::table("customers")->insert([

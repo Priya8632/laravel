@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="form-check">
+           <!-- <div class="form-check">
                 <input type="checkbox" class="form-check-input" name="folderCkeck" id="folderCkeck">
                 <label for="folderCkeck" class="form-check-label">Want you store image in spacific folder?</label>
             </div>
@@ -149,13 +149,15 @@
                     <option value="original">Original Name</option>
                     <option value="random">Random Name</option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="form-group">
-                <input type="checkbox">Agree term and condition
+                <input type="checkbox">Agree term and condition<br>
+                <a href="login" style="color:blue;">Alredy have an Account</a>
             </div>
             <div class="form-group">
-                <button class="btn btn-dark">Submit</button>
+                <button type="submit"class="btn btn-dark">Submit</button>
+                <button type="reset" class="btn btn-danger">Cancle</button>
             </div>
         </form>
     </div>
