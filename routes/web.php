@@ -47,8 +47,12 @@ Route::get('admin_dashboard',[employee::class,'employee_data'])->middleware('adm
 Route::get('logout',[Logout::class,'logout']);
 Route::view('user_product' , 'users.user_product');
 
+#delete
 Route::get('delete/{id}', [userForm::class,'distroy']);
 
+# update data 
+Route::get('edit/{id}', [getUserData::class,'edit']);
+Route::put('edit/{id}', [getUserData::class,'update']);
 
 
 

@@ -74,6 +74,7 @@
                 <td class="bg-light">{{$record->hobby}}</td>
                 <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="75" alt="not connect"> </td>
                 <td class="bg-light"><a href="delete/{{$record->cust_id}}" class="btn btn-danger">Delete</a></td>
+                <!-- <td class="bg-light"><a href="edit/{{$record->id}}" class="btn btn-warning">Update</a></td> -->
             </tr>
             @endforeach
         </tbody>

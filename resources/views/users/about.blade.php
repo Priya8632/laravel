@@ -37,12 +37,13 @@
         .image {
             position: relative;
         }
-
         .overlay {
             position: absolute;
+            top:0;
+            left:0;
             width: 100%;
             height: 100%;
-            color:pink;
+            color:white;
             opacity: 0;
             transition: opacity 0.25s;
             backdrop-filter: blur(3px);
@@ -69,7 +70,6 @@
             font-weight: bold;
             text-align: center;
             margin-top: 180px;
-            margin-right: 40px;
             font-family: sans-serif;
         }
     </style>
@@ -86,19 +86,19 @@
     <div class="container">
         <div class="row m-5">
             <div class="col-4 image">
-                <img src="photos/images/c7.jpg" alt="" height="400px" width="300px">
+                <img src="photos/images/c7.jpg" class="nice" alt="" height="400px" width="300px">
                 <div class="overlay">
                     <p class="title">Black Forest</p>
                 </div>
             </div>
             <div class="col-4 image">
-                <img src="photos/images/c2.jpg" alt="" height="400px" width="300px">
+                <img src="photos/images/c2.jpg" class="nice" alt="" height="400px" width="300px">
                 <div class="overlay">
                     <p class="title">Cookies</p>
                 </div>
             </div>
             <div class="col-4 image">
-                <img src="photos/images/c8.jpg" alt="" height="400px" width="300px">
+                <img src="photos/images/c8.jpg" class="nice" alt="" height="400px" width="300px">
                 <div class="overlay">
                     <p class="title">Chocolate</p>
                 </div>

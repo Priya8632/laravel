@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        .container {
-            background-color: plum;
-        }
-
-        h1 {
-            /* margin-bottom:20px; */
-            text-align: center;
-        }
-
-        .nav-item a:hover {
-            color: crimson;
-        }
-
-        .nav-item a {
-            font-size: medium;
-        }
-    </style>
+    <title>update</title>
 </head>
-
 <body>
-
-    @include('users.header')
+    
+@include('users.header')
 
     <div class="container m-3 p-5 text-dark mx-auto">
 
-        <form action="userForm" method="POST" enctype="multipart/form-data">
-            @csrf
+        <form method="POST" enctype="multipart/form-data">
+            <!-- @csrf -->
             <h1 class="p-2">Ragistration Form</h1>
 
             <div class="row">
@@ -175,18 +153,6 @@
             </div>
         </form>
     </div>
-    <script>
-        let checkBox = document.getElementById("folderCkeck");
-        let folder_name = document.getElementById("folderName");
-
-        checkBox.addEventListener('click', () => {
-
-            folder_name.disabled = false;
-
-        });
-    </script>
-
-
+    
 </body>
-
 </html>
