@@ -51,8 +51,8 @@ Route::view('user_product' , 'users.user_product');
 Route::get('delete/{id}', [userForm::class,'distroy']);
 
 # update data 
-Route::get('edit/{id}', [getUserData::class,'edit']);
-Route::put('edit/{id}', [getUserData::class,'update']);
+Route::get('edit/{id}', [userForm::class,'edit']);
+Route::put('edit/{id}', [userForm::class,'update']);
 
 
 

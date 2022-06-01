@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>update</title>
 </head>
+
+
+@foreach($data)
+@endforeach
 <body>
     
 @include('users.header')
@@ -13,21 +17,23 @@
     <div class="container m-3 p-5 text-dark mx-auto">
 
         <form method="POST" enctype="multipart/form-data">
-            <!-- @csrf -->
-            <h1 class="p-2">Ragistration Form</h1>
+            @csrf
+            {{method_field('PUT')}}
+
+            <h1 class="p-2">Update Details</h1>
 
             <div class="row">
                 <div class="form-group col-md-6">
                     <div class="form-group">
                         <label for="">Firstname</label>
-                        <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
+                        <input type="text" name="first_name" class="form-control" value="{{$data->Firstname}}">
                         <small class="form-text  text-dark"> @error('first_name'){{$message}} @enderror </small>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <div class="form-group">
                         <label for="">Lastname</label>
-                        <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">
+                        <input type="text" name="last_name" class="form-control" value="{{$data->Lastname}}">
                         <small class="form-text  text-dark"> @error('last_name'){{$message}} @enderror </small>
                     </div>
                 </div>
@@ -36,7 +42,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Email address</label>
-                    <input type="email" name="email" class="form-control" value="{{old('email')}}">
+                    <input type="email" name="email" class="form-control" value="{{$data->Email}}">
                     <small class="form-text text-dark"> @error('email'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -44,12 +50,12 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="">Password</label>
-                    <input type="password" name="password" class="form-control" value="{{old('password')}}">
+                    <input type="password" name="Password" class="form-control">
                     <small class="form-text text-dark"> @error('password'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="">Confirm password</label>
-                    <input type="password" name="confirm_password" class="form-control" value="{{old('confirm_password')}}">
+                    <input type="password" name="confirm_password" class="form-control">
                     <small class="form-text text-dark"> @error('confirm_password'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -57,7 +63,7 @@
             <div class="row">
                 <div class="form-group col-md-8">
                     <label for="">Mobile no</label>
-                    <input type="text" name="mobile_no" class="form-control" value="{{old('mobile_no')}}">
+                    <input type="text" name="Mobileno" class="form-control" value="{{$data->mobile_no}}">
                     <small class="form-text text-dark"> @error('mobile_no'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
@@ -72,7 +78,7 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="">Age</label>
-                    <input type="text" name="age" class="form-control" value="{{old('age')}}">
+                    <input type="text" name="age" class="form-control" value="{{$data->Age}}">
                     <small class="form-text text-dark"> @error('age'){{$message}} @enderror </small>
                 </div>
                 <div class="form-group col-md-4">
@@ -88,7 +94,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Pincode</label>
-                    <input type="text" name="pincode" class="form-control" value="{{old('pincode')}}">
+                    <input type="text" name="pincode" class="form-control" value="{{$data->Pincode}}">
                     <small class="form-text text-dark"> @error('pincode'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -144,11 +150,7 @@
             </div> -->
 
             <div class="form-group">
-                <input type="checkbox">Agree term and condition<br>
-                <a href="login" style="color:blue;">Alredy have an Account</a>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-dark">Update</button>
                 <button type="reset" class="btn btn-danger">Cancle</button>
             </div>
         </form>
