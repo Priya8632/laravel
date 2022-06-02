@@ -84,9 +84,9 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Gender</label><br>
-                    <input type="radio" name="gender">Male
-                    <input type="radio" name="gender">Female
-                    <input type="radio" name="gender">Others
+                    <input type="radio" name="gender" value="male" @if(old('gender')=='male' ) checked @endif>Male
+                    <input type="radio" name="gender" value="female" @if(old('gender')=='female' ) checked @endif>Female
+                    <input type="radio" name="gender" value="others" @if(old('gender')=='others' ) checked @endif>Others
                     <small class="form-text text-dark"> @error('gender'){{$message}} @enderror </small>
                 </div>
             </div>
@@ -100,11 +100,11 @@
                 <div class="form-group col-md-4">
                     <label for="">City</label>
                     <select name="city" id="" class="form-control">
-                        <option value="Surat">Surat</option>
-                        <option value="Rajkot">Rajkot</option>
-                        <option value="Amreli">Amreli</option>
-                        <option value="Vadodara">Vadodara</option>
-                        <option value="Valsad">Valsad</option>
+                        <option value="Surat" @if(old('city')=='Surat' ) selected @endif>Surat</option>
+                        <option value="Rajkot" @if(old('city')=='Rajkot' ) selected @endif>Rajkot</option>
+                        <option value="Amreli" @if(old('city')=='Amreli' ) selected @endif>Amreli</option>
+                        <option value="Vadodara" @if(old('city')=='Vadodara' ) selected @endif>Vadodara</option>
+                        <option value="Valsad" @if(old('city')=='Valsad' ) selected @endif>Valsad</option>
                     </select>
                     <small class="form-text text-dark"> @error('city'){{$message}} @enderror </small>
                 </div>
@@ -115,6 +115,7 @@
                 </div>
             </div>
 
+            
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" name="hobby[]" id="reading" value="reading">
                 <label for="reading" class="form-check-label">Reading</label>

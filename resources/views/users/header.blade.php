@@ -10,7 +10,7 @@
 </style>
 
     <nav class="navbar">
-        <img src="photos/images/logo.png" height="80px" width="180px" alt="">
+        <img src="photos/images/logo.png" height="80px" width="180px" alt="image">
         <ul class="nav justify-content-end">
             <li class="nav-item"><a href="home" class="nav-link">HOME</a></li>
             <li class="nav-item"><a href="about" class="nav-link">ABOUT</a></li>

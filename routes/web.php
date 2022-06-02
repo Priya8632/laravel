@@ -48,11 +48,13 @@ Route::get('logout',[Logout::class,'logout']);
 Route::view('user_product' , 'users.user_product');
 
 #delete
-Route::get('delete/{id}', [userForm::class,'distroy']);
+Route::get('delete/{id}',[userForm::class,'distroy']);
 
 # update data 
-Route::get('edit/{id}', [userForm::class,'edit']);
-Route::put('edit/{id}', [userForm::class,'update']);
+Route::get('edit/{id}',[userForm::class,'edit']);
+Route::put('edit/{id}',[userForm::class,'update']);
+
+Route::get('img', [userForm::class,'getimg']);
 
 
 
