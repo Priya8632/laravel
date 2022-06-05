@@ -56,8 +56,8 @@ Route::put('edit/{id}',[userForm::class,'update']);
 
 Route::get('img', [userForm::class,'getimg']);
 
-
-
+# localization
+Route::view('language','practice.language');
 Route::view('priya','priya')->middleware('test');
 
 #fetch data from database through controller with model
