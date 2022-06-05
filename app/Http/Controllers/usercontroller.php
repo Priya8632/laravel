@@ -9,7 +9,6 @@ class usercontroller extends Controller
 {
     function data()
     {
-
         return User::all();
     }
 }

@@ -12,6 +12,8 @@ use App\http\controllers\Logout;
 use App\Http\Controllers\employee;
 use App\Http\Controllers\Httpcontroller;
 use App\Http\Controllers\usercontroller;
+use Illuminate\Support\Facades\App;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,55 +25,50 @@ use App\Http\Controllers\usercontroller;
 | contains the "web" middleware group. Now create something great!
 |
 */
-#user interface
-Route::view('/','users.Home');
-Route::view('home','users.Home');
-Route::view('about','users.about');
-Route::view('product','users.Product');
-Route::view('data','users.data');
-Route::view('info','users.info');
 
-Route::view('dashboard','users.dashboard')->middleware('logout');
+#user interface
+Route::view('/', 'users.Home');
+Route::view('home', 'users.Home');
+Route::view('about', 'users.about');
+Route::view('product', 'users.Product');
+Route::view('data', 'users.data');
+Route::view('info', 'users.info');
+Route::view('dashboard', 'users.dashboard')->middleware('logout');
 
 # session topic
-Route::view('signup','users.signUp');
-Route::post('userForm',[userForm::class,'getdata']); 
-Route::view('login','users.Login')->middleware('login');
-Route::post('login',[Login::class,'loginuser']);
+Route::view('signup', 'users.signUp');
+Route::post('userForm', [userForm::class, 'getdata']);
+Route::view('login', 'users.Login')->middleware('login');
+Route::post('login', [Login::class, 'loginuser']);
 
 
 # fetch data from database
-Route::get('admin_dashboard',[employee::class,'employee_data'])->middleware('admin_Logout');
+Route::get('admin_dashboard', [employee::class, 'employee_data'])->middleware('admin_Logout');
 
 #sign out user
-Route::get('logout',[Logout::class,'logout']);
-Route::view('user_product' , 'users.user_product');
+Route::get('logout', [Logout::class, 'logout']);
+Route::view('user_product', 'users.user_product');
 
 #delete
-Route::get('delete/{id}',[userForm::class,'distroy']);
+Route::get('delete/{id}', [userForm::class, 'distroy']);
 
 # update data 
-Route::get('edit/{id}',[userForm::class,'edit']);
-Route::put('edit/{id}',[userForm::class,'update']);
+Route::get('edit/{id}', [userForm::class, 'edit']);
+Route::put('edit/{id}', [userForm::class, 'update']);
 
-Route::get('img', [userForm::class,'getimg']);
+#fatch img in db
+Route::get('img', [userForm::class, 'getimg']);
 
-# localization
-Route::view('language','practice.language');
-Route::view('priya','priya')->middleware('test');
 
 #fetch data from database through controller with model
-Route::get('modal',[usercontroller::class,'data']);
+Route::get('modal', [usercontroller::class, 'data']);
 
 
 #fetch data from Api
-Route::get('api',[Httpcontroller::class ,'index']);
-#this is deafult route
-// Route::fallback(function () {
-//     return view('users.Default');
-// });
- 
-Route::group(["middleware" => ["usercheck"]], function(){
+Route::get('api', [Httpcontroller::class, 'index']);
+
+#group middleware
+Route::group(["middleware" => ["usercheck"]], function () {
     Route::get("group", function () {
         echo 'Welcome to web development group';
     });
@@ -82,35 +79,58 @@ Route::group(["middleware" => ["usercheck"]], function(){
     Route::get('html', function () {
         echo "html";
     });
-
-
 });
 
 
 
+# => practice route
+
+# change languages in mac view
+Route::get('mac/{lang?}',function ($lang = NULL){
+    App::setLocale($lang);
+    return view('practice.language');
+});
 
 
+Route::get('/mac/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'ge', 'gu'])) {
+        abort(400);
+    }
+    App::setLocale($locale);
+    return view('practice.language');
+});
 
-// Route::get('/file3', function(){
-//     return view('file3');
-// });
-// Route::get('/file5', function(){
-//     return view('file5');
-// });
-// Route::get('/file7', function(){
-//     return view('file7');
-// });
-// Route::get('/file8', function(){
-//     return view('file8');
-// });
-// Route::get('/file9', function(){
-//     return view('file9');
-// });
+#language change localization
+// Route::view('language', 'practice.language');
 
-// Route::get("Amount/{amount}",[Amount::class,"check"]);
-// Route::get("maths_operation",[maths_operation::class,"maths"]);
-// Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
-// Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
-// Route::get("maths_operation2/{user}/{pass}",[maths_operation2::class,"fun7"]);
-// Route::get("displaytext",[displaytext::class,"fun3"]);
-// Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
+#middleware practice
+Route::view('priya', 'priya')->middleware('test');
+    
+Route::get('/file3', function(){
+    return view('file3');
+});
+Route::get('/file5', function(){
+    return view('file5');
+});
+Route::get('/file7', function(){
+    return view('file7');
+});
+Route::get('/file8', function(){
+    return view('file8');
+});
+Route::get('/file9', function(){
+    return view('file9');
+});
+
+Route::get("Amount/{amount}",[Amount::class,"check"]);
+Route::get("maths_operation",[maths_operation::class,"maths"]);
+Route::get("mobile_details/{phone}",[mobile_details::class , "mobile"]);
+Route::get("maths_operation2/{num}",[maths_operation2::class,"check"]);
+Route::get("maths_operation2/{user}/{pass}",[maths_operation2::class,"fun7"]);
+Route::get("displaytext",[displaytext::class,"fun3"]);
+Route::get("displaytext/{n1}/{n2}",[displaytext::class,"fun5"]);
+
+#this is deafult route
+// Route::fallback(function () {
+//     return view('users.Default');
+// });

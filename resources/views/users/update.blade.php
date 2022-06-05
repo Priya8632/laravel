@@ -23,6 +23,7 @@
 
 @foreach($data as $detail)
 @endforeach
+
 <body>
     
     @include('users.header')
@@ -114,22 +115,22 @@
 
             <label for="">Hobby</label>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="hobby[]" id="reading" value="reading" @if($detail->hobby =='reading' ) checked @endif>
+                <input type="checkbox" class="form-check-input" name="hobby[]" id="reading" value="reading" @if(str_contains($detail->hobby ,'reading' )) checked @endif>
                 <label for="reading" class="form-check-label">Reading</label>
             </div>
 
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="hobby[]" id="writing" value="writing" @if($detail->hobby =='writing' ) checked @endif>
+                <input type="checkbox" class="form-check-input" name="hobby[]" id="writing" value="writing" @if(str_contains($detail->hobby ,'writing' )) checked @endif>
                 <label for="writing" class="form-check-label">Writing</label>
             </div>
 
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="hobby[]" id="playing" value="playing" @if($detail->hobby =='playing' ) checked @endif>
+                <input type="checkbox" class="form-check-input" name="hobby[]" id="playing" value="playing" @if(str_contains($detail->hobby ,'playing' )) checked @endif>
                 <label for="playing" class="form-check-label">Playing</label>
             </div>
 
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="hobby[]" id="cooking" value="cooking" @if($detail->hobby =='cooking' ) checked @endif>
+                <input type="checkbox" class="form-check-input" name="hobby[]" id="cooking" value="cooking" @if(str_contains($detail->hobby ,'cooking' )) checked @endif>
                 <label for="cooking" class="form-check-label">Cooking</label>
             </div>
             <small class="form-text text-dark"> @error('hobby'){{$message}} @enderror </small>

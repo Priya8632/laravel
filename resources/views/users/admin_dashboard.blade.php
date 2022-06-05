@@ -12,8 +12,9 @@
         .nav-item a:hover {
             color: crimson;
         }
+
         .nav-item a {
-            font-size:medium;
+            font-size: medium;
         }
     </style>
 </head>
@@ -73,7 +74,7 @@
                 <td class="bg-light">{{$record->pincode}}</td>
                 <td class="bg-light">{{$record->hobby}}</td>
                 <td class="bg-light"><img src="{{ asset($record->image) }}" width="100" height="75" alt="not connect"> </td>
-                <td class="bg-light"><a href="delete/{{$record->cust_id}}" class="btn btn-danger">Delete</a></td>
+                <td class="bg-light"><a href="delete/{{$record->cust_id}}" onclick = "delete_record('{{$record->cust_id}}')"class="btn btn-danger">Delete</a></td>
                 <td class="bg-light"><a href="edit/{{$record->cust_id}}" class="btn btn-success">Update</a></td>
 
             </tr>
@@ -81,8 +82,16 @@
         </tbody>
 
     </table>
+    <script>
+        function delete_record(cust_id) {
 
-    
+            let confirmation = confirm('Are you sure to delete this record?');
+            if (confirmation === false) {
+                window.location.replace('delete/' +cust_id);
+            }
+        }
+    </script>
+
 </body>
 
 </html>
