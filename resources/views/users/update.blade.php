@@ -135,8 +135,6 @@
             </div>
             <small class="form-text text-dark"> @error('hobby'){{$message}} @enderror </small>
 
-
-            
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="">Photo</label>

@@ -15,23 +15,39 @@
 
     <!-- language dropdown -->
     <div class="col-md-3 mb-3">
-           <h2> <label for="validationDefault04">Languages</label></h2>
-            <select class="custom-select" id="validationDefault04" required onchange = "javascript:handle(this)">
-                <option selected disabled value="">Choose...</option>
-                <option><a href="{{url('mac/en')}}">English</a></option>
-                <option><a href="{{url('mac/gu')}}">Gujarati</a></option>
-            </select>
+        <h2> <label for="validationDefault04">Languages</label></h2>
+        <select class="custom-select" id="language" required onchange="selectLang(this)">
+            <option selected disabled value="">Choose...</option>
+            <option value="{{url('language/en')}}" id="english">English</option>
+            <option value="{{url('language/gu')}}" id="gujarati">Gujarati</option>
+            <option value="{{url('language/ge')}}" id="german">German</option>
+
+        </select>
     </div>
 
-    
-<script type="text/javascript">
-    function handle(elm)
-    {
-        window.location = elm.value;
-    }
 
-</script>
-  
+    <script type="text/javascript">
+        let english = document.getElementById('english');
+        let german = document.getElementById('german');
+        let gujarati = document.getElementById('gujarati');
+
+        function selectLang(lang) {
+            changeLocation = window.location = lang.value;
+        }
+
+
+        let getPath = window.location.pathname;
+        console.log(getPath);
+        switch (getPath) {
+            case '/language/gu':
+                gujarati.setAttribute('selected', true);
+                break;
+            case '/language/ge':
+                german.setAttribute('selected', true);
+                break;
+        }
+    </script>
+
 </body>
 
 </html>

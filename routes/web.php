@@ -43,7 +43,7 @@ Route::post('login', [Login::class, 'loginuser']);
 
 
 # fetch data from database
-Route::get('admin_dashboard', [employee::class, 'employee_data'])->middleware('admin_Logout');
+Route::get('admin_dashboard/{no?}', [employee::class, 'employee_data'])->middleware('admin_Logout');
 
 #sign out user
 Route::get('logout', [Logout::class, 'logout']);
@@ -86,19 +86,19 @@ Route::group(["middleware" => ["usercheck"]], function () {
 # => practice route
 
 # change languages in mac view
-Route::get('mac/{lang?}',function ($lang = NULL){
+Route::get('language/{lang?}',function ($lang = NULL){
     App::setLocale($lang);
     return view('practice.language');
 });
 
 
-Route::get('/mac/{locale}', function ($locale) {
-    if (! in_array($locale, ['en', 'ge', 'gu'])) {
-        abort(400);
-    }
-    App::setLocale($locale);
-    return view('practice.language');
-});
+// Route::get('/mac/{locale}', function ($locale) {
+//     if (! in_array($locale, ['en', 'ge', 'gu'])) {
+//         abort(400);
+//     }
+//     App::setLocale($locale);
+//     return view('practice.language');
+// });
 
 #language change localization
 // Route::view('language', 'practice.language');
