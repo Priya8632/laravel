@@ -19,7 +19,7 @@ class insertData extends Seeder
     public function run()
     {
         $faker = Factory::create();
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 20; $i++) {
 
             DB::table('customers')->insert([
                 "first_name" => $faker->firstname(),
